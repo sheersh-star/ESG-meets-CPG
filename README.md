@@ -13,18 +13,23 @@ Built from `CPG_ESG_Regulatory_Briefing.pdf` + `CPG_ESG_Regulatory_Briefing_Pres
 ```
 data_pipeline.py            Reads data/raw/*.csv, writes data/processed/esg_console_data.json
 refresh_live_sources.sh     Live-pull commands to run yourself (this sandbox has no network access)
+index.html / styles.css / app.js   Zero-dependency static frontend
 data/raw/                   Source data, one file per dataset
-  regulatory_calendar.csv     18 rows / 10 regulations, key dates, status, confidence, source
-  ingredient_exposure.csv     9 ingredients/materials → regulatory driver → alternative sourcing
-  packaging_data_sources.csv  4 real UK packaging datasets (NPWD, Producer Register, WRAP)
+  regulatory_calendar.csv       19 rows / 10 regulations, key dates, status, confidence, source
+  ingredient_exposure.csv       9 ingredients/materials → regulatory driver → alternative sourcing
+  packaging_data_sources.csv    4 real UK packaging datasets (NPWD, Producer Register, WRAP)
+  retailer_risk_assessment.csv  14 real grocery/delivery entities ranked least-to-most likely to face
+                                 regulatory/ESG legal action, with short/long-term recommendations
 data/processed/
   esg_console_data.json       Pipeline output — regenerate with `python3 data_pipeline.py`
 docs/
-  data_sources.md             What's collected, what's resolved, what's still a genuine gap
+  data_sources.md              What's collected, what's resolved, what's still a genuine gap
+  rating_methodology.md        Draft methodology for a future retailer/product ESG rating
+  retailer_risk_assessment.md  Reasoning + solutions behind the retailer risk ranking
 ```
 
 ## Status
 
-Data collection + pipeline phase. `data_pipeline.py` runs and produces real structured JSON from the raw CSVs (18/18 rows currently at "real" confidence — the SB253 date dispute from the first pass is now resolved and independently corroborated). See `docs/data_sources.md` for exactly what's verified, what's still only sourced to the original briefing deck, and what's a genuine data gap (RSPO has no open API, company financial data for exposure-prediction isn't wired in yet).
+Data collection + pipeline phase, frontend built and tested locally, not yet deployed/hosted. `data_pipeline.py` runs and produces real structured JSON from the raw CSVs (19/19 regulatory-calendar rows at "real" confidence). See `docs/data_sources.md` for exactly what's verified, what's still only sourced to the original briefing deck, and what's a genuine data gap (RSPO has no open API, company financial data for exposure-prediction isn't wired in yet).
 
-No frontend built yet. GitHub repo and hosting come after that.
+`docs/rating_methodology.md` and `docs/retailer_risk_assessment.md` are the start of a company-level ESG rating layer — a real 14-entity risk ranking exists in `data/raw/retailer_risk_assessment.csv` and is wired into the pipeline output, but not yet surfaced in the frontend UI (next step).

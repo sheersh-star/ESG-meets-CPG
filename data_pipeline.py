@@ -63,6 +63,12 @@ def load_packaging_sources():
     return load_csv("packaging_data_sources.csv")
 
 
+def load_retailer_risk_assessment():
+    rows = load_csv("retailer_risk_assessment.csv")
+    rows.sort(key=lambda r: int(r["rank"]) if r.get("rank", "").isdigit() else 999)
+    return rows
+
+
 def summarize(regulations):
     by_jurisdiction = {}
     by_status = {}
@@ -84,12 +90,14 @@ def generate_data():
     regulations = load_regulatory_calendar()
     ingredients = load_ingredient_exposure()
     packaging_sources = load_packaging_sources()
+    retailer_risk = load_retailer_risk_assessment()
 
     return {
         "last_updated": datetime.now().isoformat(timespec="seconds"),
         "regulatory_calendar": regulations,
         "ingredient_exposure": ingredients,
         "packaging_data_sources": packaging_sources,
+        "retailer_risk_assessment": retailer_risk,
         "summary": summarize(regulations),
     }
 
@@ -105,6 +113,7 @@ def main():
           f"({data['summary']['real_confidence_count']} real-confidence)")
     print(f"  {len(data['ingredient_exposure'])} ingredient exposure rows")
     print(f"  {len(data['packaging_data_sources'])} packaging data sources")
+    print(f"  {len(data['retailer_risk_assessment'])} retailer risk assessment rows")
 
 
 if __name__ == "__main__":
