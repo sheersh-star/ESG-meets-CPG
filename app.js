@@ -67,6 +67,53 @@ function renderIngredients(rows) {
   }).join('');
 }
 
+function riskClass(band) {
+  if (band === 'moderate') return 'warning';
+  if (band === 'elevated' || band === 'highest') return 'critical';
+  return 'good'; // lower, low_moderate
+}
+
+function riskLabel(band) {
+  return band.replace(/_/g, '-');
+}
+
+function renderRiskSummary(rows) {
+  var el = document.getElementById('risk-summary');
+  var counts = {};
+  rows.forEach(function (r) {
+    counts[r.risk_band] = (counts[r.risk_band] || 0) + 1;
+  });
+  var order = ['lower', 'low_moderate', 'moderate', 'elevated', 'highest'];
+  el.innerHTML = order.filter(function (b) { return counts[b]; }).map(function (b) {
+    return '<span><strong>' + counts[b] + '</strong> ' + riskLabel(b) + '</span>';
+  }).join('');
+}
+
+function renderRisk(rows) {
+  renderRiskSummary(rows);
+  var el = document.getElementById('risk-table');
+  el.innerHTML = rows.map(function (r) {
+    var cls = riskClass(r.risk_band);
+    var pillars = r.primary_exposure_pillars.split(';').map(function (p) { return p.trim(); });
+    return '<div class="risk-row ' + cls + '">' +
+      '<div class="risk-main">' +
+        '<div class="risk-name">#' + r.rank + ' &middot; ' + r.entity + '</div>' +
+        '<div class="risk-detail">' + r.ownership_type.replace(/_/g, ' ') + ' &middot; ' + r.jurisdiction_footprint + '</div>' +
+        '<div class="tag-row">' + pillars.map(function (p) { return '<span class="tag">' + p + '</span>'; }).join('') + '</div>' +
+        '<div class="risk-evidence">' + r.key_evidence + '</div>' +
+        '<div class="risk-actions">' +
+          '<div><span class="risk-action-label">Short-term</span>' + r.short_term_action + '</div>' +
+          '<div><span class="risk-action-label">Long-term</span>' + r.long_term_action + '</div>' +
+        '</div>' +
+      '</div>' +
+      '<div class="risk-meta">' +
+        '<span class="badge ' + cls + '">' + riskLabel(r.risk_band) + '</span>' +
+        '<div class="risk-source">' + r.source + '</div>' +
+      '</div>' +
+    '</div>';
+  }).join('');
+}
+
 function renderPackaging(rows) {
   var el = document.getElementById('packaging-table');
   el.innerHTML = rows.map(function (r) {
@@ -87,6 +134,7 @@ async function load() {
     renderCalendar(data.regulatory_calendar);
     renderIngredients(data.ingredient_exposure);
     renderPackaging(data.packaging_data_sources);
+    renderRisk(data.retailer_risk_assessment);
     document.getElementById('sync-time').textContent = 'Synced ' + data.last_updated;
   } catch (err) {
     console.error(err);

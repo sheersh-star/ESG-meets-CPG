@@ -72,4 +72,28 @@ code { font-family: var(--font-mono); background: var(--surface-2); padding: 1px
 .pkg-card a { font-weight: 600; }
 .pkg-notes { color: var(--muted); margin-top: 4px; }
 
+.tag-row { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+.tag { font-family: var(--font-mono); font-size: 10px; text-transform: uppercase; letter-spacing: 0.02em; color: var(--accent); border: 1px solid var(--accent); border-radius: 999px; padding: 2px 9px; }
+.risk-summary { display: flex; flex-wrap: wrap; gap: 16px; font-family: var(--font-mono); font-size: 11.5px; color: var(--muted-2); margin-bottom: 18px; }
+.risk-summary strong { color: var(--ink); }
+.risk-row {
+  background: var(--surface); border: 1px solid var(--line); border-left-width: 4px;
+  border-radius: 8px; padding: 18px 20px; margin-bottom: 12px;
+  display: flex; flex-wrap: wrap; justify-content: space-between; gap: 14px 24px;
+}
+.risk-row.good { border-left-color: var(--accent); }
+.risk-row.warning { border-left-color: var(--accent-2); }
+.risk-row.critical { border-left-color: var(--danger); }
+.risk-main { flex: 1; min-width: 280px; }
+.risk-name { font-weight: 600; font-size: 1rem; }
+.risk-detail { color: var(--muted); font-size: 0.87rem; margin-top: 3px; text-transform: capitalize; }
+.risk-evidence { color: var(--muted); font-size: 0.87rem; margin-top: 10px; }
+.risk-actions { margin-top: 12px; font-size: 0.87rem; display: flex; flex-direction: column; gap: 5px; }
+.risk-action-label { font-family: var(--font-mono); font-size: 10px; text-transform: uppercase; letter-spacing: 0.03em; color: var(--muted-2); margin-right: 6px; }
+.risk-meta { text-align: right; min-width: 170px; }
+.risk-source { font-family: var(--font-mono); font-size: 10.5px; color: var(--muted-2); margin-top: 10px; }
+.badge.good { color: var(--accent); border-color: var(--accent); }
+.badge.warning { color: var(--accent-2); border-color: var(--accent-2); }
+.badge.critical { color: var(--danger); border-color: var(--danger); }
+
 footer.site-footer { border-top: 1px solid var(--line); padding: 24px 0 48px; font-family: var(--font-mono); font-size: 11px; color: var(--muted-2); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }

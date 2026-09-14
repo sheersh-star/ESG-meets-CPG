@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-14T12:20:00",
+  "last_updated": "2026-09-14T12:25:49",
   "regulatory_calendar": [
     {
       "regulation_id": "EmpCo",
@@ -417,6 +417,8 @@
       "risk_band": "lower",
       "primary_exposure_pillars": "Green Claims Integrity; Supply-Chain Human Rights",
       "key_evidence": "Member-owned governance; ETI Base Code sourcing standard; 100% Fairtrade across core own-brand lines (tea/coffee/sugar/bananas/cocoa) since 2017; no notable ESG enforcement history found",
+      "short_term_action": "Self-audit against the five console pillars now, before any of them become mandatory for a business this size.",
+      "long_term_action": "Publish a CSDDD-style supply-chain human-rights due-diligence statement pre-emptively, using the cooperative structure as the anchor.",
       "confidence": "real",
       "source": "coop.co.uk; ethicalconsumer.org",
       "last_verified": "2026-09-14"
@@ -430,6 +432,8 @@
       "risk_band": "lower",
       "primary_exposure_pillars": "Climate & Emissions Disclosure; Packaging & Waste",
       "key_evidence": "First UK retailer with externally validated net-zero targets; disclosed 40% Scope 1-2 cut vs 2020/21 baseline (2025); Polytag UV-tag packaging traceability on milk; specific dated packaging/circularity targets (70% circular design by 2030)",
+      "short_term_action": "Maintain the third-party validation cadence \u2014 nothing urgent here.",
+      "long_term_action": "Extend Polytag-style packaging traceability across the full own-label range ahead of pEPR's reporting requirements becoming mandatory in detail.",
       "confidence": "real",
       "source": "johnlewispartnership.co.uk ES Report 2024/25; sustainability-news.net",
       "last_verified": "2026-09-14"
@@ -443,6 +447,8 @@
       "risk_band": "low_moderate",
       "primary_exposure_pillars": "Green Claims Integrity; Deforestation & Sourcing",
       "key_evidence": "10/10 on 2026 RSPO Shared Responsibility Scorecard; ~99% segregated RSPO palm oil; historical 'first carbon neutral major retailer' framing is the kind of broad claim EU Green Claims Directive/EmpCo specifically targets even when backed by real programs",
+      "short_term_action": "Get an independent assurance statement on any remaining broad net-zero/carbon-neutral claims before the Green Claims Directive's substantiation bar applies.",
+      "long_term_action": "Finish the move from mass-balance to fully segregated palm oil on the stated timeline; formalize a legal review step for all environmental marketing copy.",
       "confidence": "real",
       "source": "corporate.marksandspencer.com Palm Oil Policy Aug 2026; sustainablefoodbusiness.com",
       "last_verified": "2026-09-14"
@@ -456,6 +462,8 @@
       "risk_band": "low_moderate",
       "primary_exposure_pillars": "Climate & Emissions Disclosure; Packaging & Waste",
       "key_evidence": "Detailed, specific, tracked own-brand plastic reduction (29% since 2017, targeting 40% by 2026) and food-waste reduction (43% since 2016); private multinational large enough to eventually fall under CSRD-equivalent group reporting thresholds, not yet matched by UK-specific standardized disclosure",
+      "short_term_action": "Publish UK figures in a CSRD-aligned structure now, rather than only in 'Good Food' report language.",
+      "long_term_action": "Disclose a group-level (Schwarz Gruppe) CSRD-alignment roadmap publicly, not just GB-specific initiatives.",
       "confidence": "real",
       "source": "corporate.lidl.co.uk press releases 2023/2025; edie.net",
       "last_verified": "2026-09-14"
@@ -469,6 +477,8 @@
       "risk_band": "low_moderate",
       "primary_exposure_pillars": "Climate & Emissions Disclosure; Deforestation & Sourcing",
       "key_evidence": "4,500 tonnes of packaging removed (2024 report); flexible-plastic traceability via Greenback's eco2Veritas; same private-multinational CSRD-readiness gap as Lidl; ingredient-level EUDR sourcing traceability at company level not yet publicly evidenced",
+      "short_term_action": "Same CSRD-readiness disclosure step as Lidl.",
+      "long_term_action": "Build and publish ingredient-level EUDR sourcing traceability for own-brand cocoa/palm-oil-adjacent lines \u2014 also closes the gap flagged in ingredient_exposure.csv.",
       "confidence": "real",
       "source": "aldi.co.uk Sustainability Report 2024; esgnews.com",
       "last_verified": "2026-09-14"
@@ -482,6 +492,8 @@
       "risk_band": "moderate",
       "primary_exposure_pillars": "Packaging & Waste",
       "key_evidence": "Directly sells/packages goods online (JV with M&S); proactively investing in EPR-compliance tooling (Polytag UV tags, live on milk range + 100+ own-label SKUs); one of very few pure online-only grocers, so it is effectively a first-mover test case for how pEPR enforcement gets applied to online-only retail \u2014 genuine regulatory-ambiguity exposure even with strong compliance intent",
+      "short_term_action": "Publish explicit pEPR registration/compliance status rather than leaving it implicit in the sustainability microsite.",
+      "long_term_action": "Extend Polytag traceability from milk + ~100 SKUs to the full own-label range, and offer the resulting compliance template as an informal industry reference.",
       "confidence": "real",
       "source": "sustainability.ocadoretail.com; packaging-gateway.com",
       "last_verified": "2026-09-14"
@@ -495,6 +507,8 @@
       "risk_band": "moderate",
       "primary_exposure_pillars": "Green Claims Integrity",
       "key_evidence": "ASA has an active enforcement history in this exact space: Sainsbury's has previously been rebuked by the ASA for misleading Fairtrade tea claims, and was one of two parties (with Tesco) in a set of 'contrasting' ASA rulings on plant-based environmental claims \u2014 real, adjudicated precedent, not just accusation",
+      "short_term_action": "Legal review of every live environmental/plant-based/Fairtrade claim against the ASA CAP code; retire or re-substantiate anything resembling the challenged claims.",
+      "long_term_action": "Build a centralized claims-substantiation register \u2014 every public sustainability claim mapped to underlying verifiable data \u2014 ahead of the Green Claims Directive/EmpCo regime.",
       "confidence": "real",
       "source": "thedrum.com; lexology.com ASA contrasting rulings; asa.org.uk",
       "last_verified": "2026-09-14"
@@ -508,6 +522,8 @@
       "risk_band": "moderate",
       "primary_exposure_pillars": "Green Claims Integrity; Climate & Emissions Disclosure",
       "key_evidence": "UK's largest grocer with the widest multi-country regulatory surface of the UK-focused set; publicly accused (media, not yet a formal finding in the sources found) of greenwashing over 'biodegradable' teabag claims; also a party to the same ASA plant-based-claims dispute as Sainsbury's",
+      "short_term_action": "Same claims-substantiation audit as Sainsbury's, specifically revisiting product-level 'biodegradable'/compostability claims.",
+      "long_term_action": "Build one unified multi-jurisdiction compliance calendar per country of operation \u2014 a UK-only view understates Tesco's real exposure.",
       "confidence": "real",
       "source": "nbs-factory.com; lexology.com ASA contrasting rulings",
       "last_verified": "2026-09-14"
@@ -521,6 +537,8 @@
       "risk_band": "moderate",
       "primary_exposure_pillars": "Climate & Emissions Disclosure; Green Claims Integrity",
       "key_evidence": "Real, specific curbside-recyclable packaging rollout (replaces ~735k lbs plastic film/yr) and Climate Pledge (net-zero by 2040); but sits inside a much larger group with an existing, separate pattern of labor/antitrust regulatory scrutiny that colors investor and regulator perception of grocery-specific claims",
+      "short_term_action": "Ring-fence and independently audit grocery-specific labor and packaging claims so they're evaluated on their own record.",
+      "long_term_action": "Publish grocery-specific Scope 1-3 figures separately from whole-company figures, with a disclosed timeline on the UK curbside-recyclable rollout.",
       "confidence": "real",
       "source": "aboutamazon.com; supermarketnews.com; sellerlabs.com",
       "last_verified": "2026-09-14"
@@ -534,6 +552,8 @@
       "risk_band": "elevated",
       "primary_exposure_pillars": "Climate & Emissions Disclosure; Supply-Chain Human Rights",
       "key_evidence": "Owned 67.5% TDR Capital / 22.5% Mohsin Issa / 10% Walmart since 2024; leveraged buyout structure with less mandatory public-disclosure cadence than listed peers (Tesco/Sainsbury's/M&S); no LSE-driven ESG reporting obligation",
+      "short_term_action": "Voluntarily adopt CSRD-equivalent reporting now \u2014 large private undertakings of Asda's size are likely to be pulled into equivalent regimes regardless.",
+      "long_term_action": "Ring-fence a compliance-investment budget that survives debt-servicing pressure, so packaging/EPR/ESG programs aren't the first cut in a downturn.",
       "confidence": "real",
       "source": "corporate.asda.com; tdrcapital.com; retail-week.com",
       "last_verified": "2026-09-14"
@@ -547,6 +567,8 @@
       "risk_band": "elevated",
       "primary_exposure_pillars": "Climate & Emissions Disclosure; Governance",
       "key_evidence": "CD&R-owned since 2021 (delisted after 54 years on LSE); \u00a36.6bn acquisition debt; sold fuel forecourts (up to \u00a32.5bn) and 7 warehouses (sale-leaseback) post-acquisition, drawing explicit political criticism over asset stripping; CD&R has a public net-zero-British-farms-by-2030 pledge with a hard, checkable deadline and not yet independently verified progress",
+      "short_term_action": "Publish an independently audited progress update against the 2030 net-zero-farms pledge specifically \u2014 it's dated and public, so silence reads as a red flag by itself.",
+      "long_term_action": "Build a governance safeguard (e.g. a ring-fenced ESG capital commitment) that survives a change of ownership.",
       "confidence": "real",
       "source": "thegrocer.co.uk; forbes.com; bsic.it",
       "last_verified": "2026-09-14"
@@ -560,6 +582,8 @@
       "risk_band": "elevated",
       "primary_exposure_pillars": "Green Claims Integrity; Deforestation & Sourcing",
       "key_evidence": "Made a high-profile, absolute 2018 pledge to ban palm oil from own-label products (the Greenpeace 'Rang-tan' campaign) \u2014 the pledge was later partially reversed; a reversed absolute environmental pledge is precisely the pattern the EU Green Claims Directive/EmpCo and equivalent UK rules are designed to catch",
+      "short_term_action": "Publicly clarify the current, actual state of the palm-oil policy \u2014 ambiguity about a walked-back pledge is itself the exposure.",
+      "long_term_action": "Replace the absolute 'ban' framing with a verifiable RSPO-segregated-sourcing commitment (the M&S model) \u2014 smaller claim, fully defensible.",
       "confidence": "real",
       "source": "campaignlive.co.uk; malaymail.com MPOB reversal report",
       "last_verified": "2026-09-14"
@@ -573,6 +597,8 @@
       "risk_band": "elevated",
       "primary_exposure_pillars": "Supply-Chain Human Rights; Packaging & Waste",
       "key_evidence": "Exited UK, Germany, Netherlands and the US on 29 Apr 2024 (~1,500 UK jobs affected) after unit-economics collapse \u2014 not itself an ESG enforcement action, but the dark-store/gig-rider quick-commerce model structurally combines higher packaging-per-basket than consolidated grocery baskets with rider-classification exposure; included as the model archetype since a re-entrant would carry the same structural risk",
+      "short_term_action": "Not applicable to current UK operations; any residual pEPR registrations or former-rider claims should be wound down cleanly rather than left dangling.",
+      "long_term_action": "If quick-commerce re-enters UK/EU markets: design rider classification and reusable-packaging systems in from day one, ahead of the EU Platform Work Directive.",
       "confidence": "real",
       "source": "grocerygazette.co.uk; retailtechinnovationhub.com",
       "last_verified": "2026-09-14"
@@ -586,6 +612,8 @@
       "risk_band": "highest",
       "primary_exposure_pillars": "Supply-Chain Human Rights",
       "key_evidence": "Already has a real, settled enforcement outcome: $46.5M settlement (announced Oct 2022) with the San Diego City Attorney over worker misclassification, covering ~308,000 workers; operates in a post-AB5 landscape (upheld by 9th Circuit, Jun 2024) where the marketplace/contractor model itself is the exposed structural assumption, not a peripheral practice",
+      "short_term_action": "Complete a state-by-state gig-worker classification audit across every US state of operation, not just California; pre-emptively align contractor terms before the next state files.",
+      "long_term_action": "Get ahead of the EU Platform Work Directive's rebuttable-employee-presumption standard before any EU/UK expansion \u2014 one lost classification case in this model tends to cascade into serial suits.",
       "confidence": "real",
       "source": "grocerydive.com; bamlawca.com; lexology.com IC misclassification update",
       "last_verified": "2026-09-14"
