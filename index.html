@@ -23,7 +23,7 @@
 
   <section class="panel">
     <h2>Compliance Calendar</h2>
-    <p class="panel-sub">Sorted by days until each key date. Confirmed dates are corroborated by more than one independent source — see the confidence badge on each row.</p>
+    <p class="panel-sub">Sorted by days until each key date. Confirmed dates are corroborated by more than one independent source — see the confidence badge on each row. Each row also carries the political trajectory behind it, from the Legislative &amp; Political Forecast below.</p>
     <div id="calendar-table"></div>
   </section>
 
@@ -44,6 +44,15 @@
     <p class="panel-sub">14 real grocery and delivery entities, ranked from least to most likely to face a regulatory or ESG-grounds legal action. Grounded in real ownership, disclosure and enforcement history — analytical judgment on cited evidence, not a computed score. See <code>docs/retailer_risk_assessment.md</code> for full reasoning and honest gaps.</p>
     <div id="risk-summary" class="risk-summary"></div>
     <div id="risk-table"></div>
+  </section>
+
+  <section class="panel">
+    <h2>Legislative &amp; Political Forecast</h2>
+    <p class="panel-sub">Built without any live APIs — this sandbox has no outbound network access, so every fact below was researched by hand this session (WebSearch) and saved as static data, same as the rest of this console. Who currently controls each relevant body, and which direction each regulation is actually moving as a result, grounded in real votes, appointments and public statements — not punditry. See <code>docs/legislative_forecast_methodology.md</code> for the full method and honest gaps (4 of 12 regulations are flagged as genuinely unresearched, not guessed).</p>
+    <h3 class="subhead">Who controls what</h3>
+    <div id="landscape-table"></div>
+    <h3 class="subhead">Trajectory by regulation</h3>
+    <div id="forecast-table"></div>
   </section>
 
   <section class="panel">

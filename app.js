@@ -37,6 +37,23 @@ function renderSummary(summary) {
   el.innerHTML = parts.map(function (p) { return '<span>' + p + '</span>'; }).join('');
 }
 
+var TRAJECTORY_GLYPH = {
+  strengthening: '▲',   // ▲
+  weakening: '▼',       // ▼
+  rollback: '▼',        // ▼
+  stable: '→',          // →
+  stable_mixed: '→',    // →
+  uncertain_gap: '?',
+  not_researched: '?'
+};
+
+function trajectoryLine(r) {
+  var glyph = TRAJECTORY_GLYPH[r.political_trajectory] || '?';
+  var label = (r.political_trajectory || 'not researched').replace(/_/g, ' ');
+  var lean = (r.political_lean || 'unresearched').replace(/_/g, ' ');
+  return '<span class="traj-glyph">' + glyph + '</span> ' + label + ' &middot; ' + lean + ' control';
+}
+
 function renderCalendar(rows) {
   var el = document.getElementById('calendar-table');
   el.innerHTML = rows.map(function (r) {
@@ -46,6 +63,7 @@ function renderCalendar(rows) {
         '<div class="reg-name">' + r.short_name + '</div>' +
         '<div class="reg-detail">' + r.official_title + '</div>' +
         '<span class="badge ' + r.date_status + '">' + r.date_status + ' &middot; ' + r.confidence + '</span>' +
+        '<div class="reg-trajectory">' + trajectoryLine(r) + '</div>' +
       '</div>' +
       '<div class="reg-meta">' +
         '<div class="reg-days">' + fmtDays(r.days_until_key_date) + '</div>' +
@@ -114,6 +132,36 @@ function renderRisk(rows) {
   }).join('');
 }
 
+function renderLandscape(rows) {
+  var el = document.getElementById('landscape-table');
+  el.innerHTML = rows.map(function (r) {
+    return '<div class="landscape-card">' +
+      '<div class="landscape-head">' +
+        '<span class="landscape-entity">' + r.entity + '</span>' +
+        '<span class="landscape-role">' + r.jurisdiction + ' &middot; ' + r.role + '</span>' +
+      '</div>' +
+      '<div class="landscape-party">' + r.party_or_coalition + ' (' + r.lean.replace(/_/g, ' ') + ') &middot; in power since ' + r.in_power_since + '</div>' +
+      '<div class="landscape-stance">' + r.key_stance + '</div>' +
+    '</div>';
+  }).join('');
+}
+
+function renderForecast(rows) {
+  var el = document.getElementById('forecast-table');
+  el.innerHTML = rows.map(function (r) {
+    var isGap = r.confidence === 'gap';
+    var glyph = TRAJECTORY_GLYPH[r.trajectory] || '?';
+    return '<div class="forecast-card' + (isGap ? ' gap' : '') + '">' +
+      '<div class="forecast-head">' +
+        '<span class="forecast-id">' + r.regulation_id + '</span>' +
+        '<span class="forecast-trajectory">' + glyph + ' ' + r.trajectory.replace(/_/g, ' ') + ' &middot; ' + r.controlling_lean.replace(/_/g, ' ') + '</span>' +
+      '</div>' +
+      '<div class="forecast-actors">' + r.political_body + ' — ' + r.key_actors + '</div>' +
+      '<div class="forecast-evidence">' + r.evidence + '</div>' +
+    '</div>';
+  }).join('');
+}
+
 function renderPackaging(rows) {
   var el = document.getElementById('packaging-table');
   el.innerHTML = rows.map(function (r) {
@@ -135,6 +183,8 @@ async function load() {
     renderIngredients(data.ingredient_exposure);
     renderPackaging(data.packaging_data_sources);
     renderRisk(data.retailer_risk_assessment);
+    renderLandscape(data.political_landscape);
+    renderForecast(data.legislative_forecast);
     document.getElementById('sync-time').textContent = 'Synced ' + data.last_updated;
   } catch (err) {
     console.error(err);

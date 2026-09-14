@@ -96,4 +96,29 @@ code { font-family: var(--font-mono); background: var(--surface-2); padding: 1px
 .badge.warning { color: var(--accent-2); border-color: var(--accent-2); }
 .badge.critical { color: var(--danger); border-color: var(--danger); }
 
+.subhead { font-family: var(--font-display); font-size: 1.05rem; margin: 26px 0 14px; }
+.subhead:first-of-type { margin-top: 0; }
+
+/* Political trajectory/lean are identity, not severity — deliberately no
+   red/green coding here (red=left in the UK but red=right in the US, so
+   any color mapping would be regionally backwards for someone). Direction
+   is shown with a glyph + word, lean with plain text; color stays neutral. */
+.reg-trajectory { font-family: var(--font-mono); font-size: 10.5px; color: var(--muted-2); margin-top: 6px; }
+.traj-glyph { display: inline-block; width: 1.1em; text-align: center; }
+
+.landscape-card { background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 16px 20px; margin-bottom: 10px; }
+.landscape-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+.landscape-entity { font-weight: 600; }
+.landscape-role { font-family: var(--font-mono); font-size: 11px; color: var(--muted-2); white-space: nowrap; }
+.landscape-party { font-size: 0.87rem; color: var(--muted); margin-top: 4px; }
+.landscape-stance { font-size: 0.9rem; margin-top: 8px; }
+
+.forecast-card { background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 14px 20px; margin-bottom: 10px; }
+.forecast-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+.forecast-id { font-weight: 600; font-family: var(--font-mono); font-size: 0.95rem; }
+.forecast-trajectory { font-family: var(--font-mono); font-size: 11px; color: var(--muted-2); }
+.forecast-actors { font-size: 0.87rem; color: var(--muted); margin-top: 6px; }
+.forecast-evidence { font-size: 0.87rem; margin-top: 8px; }
+.forecast-card.gap { border-style: dashed; opacity: 0.85; }
+
 footer.site-footer { border-top: 1px solid var(--line); padding: 24px 0 48px; font-family: var(--font-mono); font-size: 11px; color: var(--muted-2); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }

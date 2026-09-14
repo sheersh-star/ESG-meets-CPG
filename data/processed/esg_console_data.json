@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-14T12:25:49",
+  "last_updated": "2026-09-14T12:44:08",
   "regulatory_calendar": [
     {
       "regulation_id": "EmpCo",
@@ -14,7 +14,10 @@
       "confidence": "real",
       "source": "briefing_deck",
       "last_verified": "2026-09-09",
-      "days_until_key_date": 13
+      "days_until_key_date": 13,
+      "political_trajectory": "uncertain_gap",
+      "political_lean": "unresearched",
+      "political_actors": "Not identified this pass"
     },
     {
       "regulation_id": "UK_pEPR",
@@ -29,7 +32,10 @@
       "confidence": "real",
       "source": "briefing_deck",
       "last_verified": "2026-09-09",
-      "days_until_key_date": 17
+      "days_until_key_date": 17,
+      "political_trajectory": "stable_mixed",
+      "political_lean": "left_of_center",
+      "political_actors": "Defra Secretary Dame Angela Eagle (Labour, appointed 20 Jul 2026 under PM Burnham)"
     },
     {
       "regulation_id": "SB253",
@@ -44,7 +50,10 @@
       "confidence": "real",
       "source": "briefing_deck; corroborated by velaw.com, morganlewis.com, gtlaw.com, sullcrom.com (CARB deferral coverage)",
       "last_verified": "2026-09-14",
-      "days_until_key_date": 57
+      "days_until_key_date": 57,
+      "political_trajectory": "strengthening",
+      "political_lean": "left",
+      "political_actors": "Sen. Scott Wiener (D-San Francisco), author; Gov. Gavin Newsom (D)"
     },
     {
       "regulation_id": "EUDR",
@@ -59,7 +68,10 @@
       "confidence": "real",
       "source": "EUR-Lex",
       "last_verified": "2026-09-14",
-      "days_until_key_date": 107
+      "days_until_key_date": 107,
+      "political_trajectory": "weakening",
+      "political_lean": "right",
+      "political_actors": "EPP (largest group) + Patriots for Europe + ECR ('right-wing alliance', per Business & Human Rights Resource Centre reporting)"
     },
     {
       "regulation_id": "SB253",
@@ -74,7 +86,10 @@
       "confidence": "real",
       "source": "briefing_deck",
       "last_verified": "2026-09-09",
-      "days_until_key_date": 109
+      "days_until_key_date": 109,
+      "political_trajectory": "strengthening",
+      "political_lean": "left",
+      "political_actors": "Sen. Scott Wiener (D-San Francisco), author; Gov. Gavin Newsom (D)"
     },
     {
       "regulation_id": "CSRD",
@@ -89,7 +104,10 @@
       "confidence": "real",
       "source": "DLA Piper, Weil, Covington coverage of Omnibus I",
       "last_verified": "2026-09-14",
-      "days_until_key_date": 186
+      "days_until_key_date": 186,
+      "political_trajectory": "weakening",
+      "political_lean": "right",
+      "political_actors": "Same EPP + Patriots for Europe + ECR coalition; European Commission (von der Leyen, EPP) proposed the underlying Omnibus I package"
     },
     {
       "regulation_id": "EUDR",
@@ -104,7 +122,10 @@
       "confidence": "real",
       "source": "EUR-Lex",
       "last_verified": "2026-09-14",
-      "days_until_key_date": 289
+      "days_until_key_date": 289,
+      "political_trajectory": "weakening",
+      "political_lean": "right",
+      "political_actors": "EPP (largest group) + Patriots for Europe + ECR ('right-wing alliance', per Business & Human Rights Resource Centre reporting)"
     },
     {
       "regulation_id": "CSRD",
@@ -119,7 +140,10 @@
       "confidence": "real",
       "source": "briefing_deck",
       "last_verified": "2026-09-09",
-      "days_until_key_date": 474
+      "days_until_key_date": 474,
+      "political_trajectory": "weakening",
+      "political_lean": "right",
+      "political_actors": "Same EPP + Patriots for Europe + ECR coalition; European Commission (von der Leyen, EPP) proposed the underlying Omnibus I package"
     },
     {
       "regulation_id": "CSDDD",
@@ -134,7 +158,10 @@
       "confidence": "real",
       "source": "briefing_deck",
       "last_verified": "2026-09-09",
-      "days_until_key_date": 681
+      "days_until_key_date": 681,
+      "political_trajectory": "weakening",
+      "political_lean": "right",
+      "political_actors": "Same Omnibus I coalition and process as CSRD (single combined package)"
     },
     {
       "regulation_id": "CSDDD",
@@ -149,7 +176,10 @@
       "confidence": "real",
       "source": "briefing_deck",
       "last_verified": "2026-09-09",
-      "days_until_key_date": 1046
+      "days_until_key_date": 1046,
+      "political_trajectory": "weakening",
+      "political_lean": "right",
+      "political_actors": "Same Omnibus I coalition and process as CSRD (single combined package)"
     },
     {
       "regulation_id": "PPWR",
@@ -164,7 +194,10 @@
       "confidence": "real",
       "source": "briefing_deck",
       "last_verified": "2026-09-09",
-      "days_until_key_date": 1205
+      "days_until_key_date": 1205,
+      "political_trajectory": "uncertain_gap",
+      "political_lean": "unresearched",
+      "political_actors": "Not identified this pass"
     },
     {
       "regulation_id": "PPWR",
@@ -179,7 +212,10 @@
       "confidence": "real",
       "source": "briefing_deck",
       "last_verified": "2026-09-09",
-      "days_until_key_date": -33
+      "days_until_key_date": -33,
+      "political_trajectory": "uncertain_gap",
+      "political_lean": "unresearched",
+      "political_actors": "Not identified this pass"
     },
     {
       "regulation_id": "SEC_Climate",
@@ -194,7 +230,10 @@
       "confidence": "real",
       "source": "briefing_deck",
       "last_verified": "2026-09-09",
-      "days_until_key_date": -103
+      "days_until_key_date": -103,
+      "political_trajectory": "rollback",
+      "political_lean": "right",
+      "political_actors": "Chair Paul Atkins (Trump-appointed)"
     },
     {
       "regulation_id": "UK_PlasticTax",
@@ -209,7 +248,10 @@
       "confidence": "real",
       "source": "briefing_deck",
       "last_verified": "2026-09-09",
-      "days_until_key_date": -166
+      "days_until_key_date": -166,
+      "political_trajectory": "stable",
+      "political_lean": "left_of_center",
+      "political_actors": "HM Treasury (no named political controversy identified)"
     },
     {
       "regulation_id": "CSRD",
@@ -224,7 +266,10 @@
       "confidence": "real",
       "source": "briefing_deck; corroborated by DLA Piper, Weil, Covington, PwC, Lexology",
       "last_verified": "2026-09-14",
-      "days_until_key_date": -180
+      "days_until_key_date": -180,
+      "political_trajectory": "weakening",
+      "political_lean": "right",
+      "political_actors": "Same EPP + Patriots for Europe + ECR coalition; European Commission (von der Leyen, EPP) proposed the underlying Omnibus I package"
     },
     {
       "regulation_id": "SB261",
@@ -239,7 +284,10 @@
       "confidence": "real",
       "source": "briefing_deck",
       "last_verified": "2026-09-09",
-      "days_until_key_date": -300
+      "days_until_key_date": -300,
+      "political_trajectory": "strengthening",
+      "political_lean": "left",
+      "political_actors": "Sen. Henry Stern, Sen. Lena Gonzalez (D) \u2014 same Climate Accountability Package as SB253"
     },
     {
       "regulation_id": "EU_GreenClaims",
@@ -254,7 +302,10 @@
       "confidence": "real",
       "source": "briefing_deck",
       "last_verified": "2026-09-09",
-      "days_until_key_date": -451
+      "days_until_key_date": -451,
+      "political_trajectory": "uncertain_gap",
+      "political_lean": "unresearched",
+      "political_actors": "Not identified this pass"
     },
     {
       "regulation_id": "UK_pEPR",
@@ -269,7 +320,10 @@
       "confidence": "real",
       "source": "briefing_deck",
       "last_verified": "2026-09-09",
-      "days_until_key_date": -531
+      "days_until_key_date": -531,
+      "political_trajectory": "stable_mixed",
+      "political_lean": "left_of_center",
+      "political_actors": "Defra Secretary Dame Angela Eagle (Labour, appointed 20 Jul 2026 under PM Burnham)"
     },
     {
       "regulation_id": "FTC_GreenGuides",
@@ -284,7 +338,10 @@
       "confidence": "real",
       "source": "briefing_deck",
       "last_verified": "2026-09-09",
-      "days_until_key_date": -1383
+      "days_until_key_date": -1383,
+      "political_trajectory": "uncertain_gap",
+      "political_lean": "right",
+      "political_actors": "Chair Andrew Ferguson (Trump-appointed)"
     }
   ],
   "ingredient_exposure": [
@@ -616,6 +673,231 @@
       "long_term_action": "Get ahead of the EU Platform Work Directive's rebuttable-employee-presumption standard before any EU/UK expansion \u2014 one lost classification case in this model tends to cascade into serial suits.",
       "confidence": "real",
       "source": "grocerydive.com; bamlawca.com; lexology.com IC misclassification update",
+      "last_verified": "2026-09-14"
+    }
+  ],
+  "political_landscape": [
+    {
+      "entity": "US Presidency / Executive Branch",
+      "jurisdiction": "US-Federal",
+      "role": "Executive",
+      "party_or_coalition": "Republican (Trump administration)",
+      "lean": "right",
+      "in_power_since": "2025-01-20",
+      "key_stance": "Revoked the prior executive order requiring federal agencies to assess climate-related financial risk; set the deregulatory tone that SEC and FTC leadership are executing on",
+      "source": "npr.org; whitehouse.gov",
+      "last_verified": "2026-09-14"
+    },
+    {
+      "entity": "U.S. Securities and Exchange Commission",
+      "jurisdiction": "US-Federal",
+      "role": "Regulator",
+      "party_or_coalition": "Republican-majority Commission, Chair Paul Atkins (Trump-appointed)",
+      "lean": "right",
+      "in_power_since": "2025-04-21",
+      "key_stance": "Ended legal defense of the 2024 climate disclosure rule in March 2025; formally proposed rescinding it on 29 May 2026, calling it 'a dramatic overreach of the Commission's statutory authority'",
+      "source": "sec.gov Atkins statement 052926; ballotpedia.org",
+      "last_verified": "2026-09-14"
+    },
+    {
+      "entity": "U.S. Federal Trade Commission",
+      "jurisdiction": "US-Federal",
+      "role": "Regulator",
+      "party_or_coalition": "Republican-majority Commission, Chair Andrew Ferguson (Trump-appointed)",
+      "lean": "right",
+      "in_power_since": "2025-01-20",
+      "key_stance": "Stated 2026 priorities are children's privacy/location data, healthcare, price transparency and 'vigorous enforcement over rulemaking'; no Green Guides-specific priority found in public statements \u2014 treated as a gap, not a confirmed deprioritization",
+      "source": "ftc.gov; bipc.com; kslaw.com",
+      "last_verified": "2026-09-14"
+    },
+    {
+      "entity": "California State Government",
+      "jurisdiction": "US-California",
+      "role": "Executive + Legislature",
+      "party_or_coalition": "Democratic Governor (Gavin Newsom) + Democratic supermajority Legislature",
+      "lean": "left",
+      "in_power_since": "2019-01-07",
+      "key_stance": "Actively defending and expanding state climate-disclosure law explicitly as a counterweight to federal rollback; Newsom is term-limited and leaves office January 2027, a real succession-risk date to watch",
+      "source": "sd11.senate.ca.gov",
+      "last_verified": "2026-09-14"
+    },
+    {
+      "entity": "UK Government",
+      "jurisdiction": "UK",
+      "role": "Executive",
+      "party_or_coalition": "Labour Party, PM Andy Burnham",
+      "lean": "left",
+      "in_power_since": "2026-07-20",
+      "key_stance": "Burnham succeeded Keir Starmer as PM on 20 Jul 2026 after Starmer's resignation amid a Labour leadership crisis (a change of leader within the same governing party, not a change of governing party); Defra Secretary is Dame Angela Eagle, appointed the same day",
+      "source": "npr.org Burnham PM; nfuonline.com Defra top team",
+      "last_verified": "2026-09-14"
+    },
+    {
+      "entity": "European Parliament (2024-2029 term)",
+      "jurisdiction": "EU",
+      "role": "Legislature",
+      "party_or_coalition": "EPP largest group (188/720 seats from the June 2024 election), forming a working alliance with Patriots for Europe and ECR on sustainability-simplification files specifically",
+      "lean": "right",
+      "in_power_since": "2024-07-16",
+      "key_stance": "This EPP+far-right coalition is not EPP's traditional centrist governing partnership \u2014 it is a file-specific working majority that delivered the Omnibus I vote (382-249-13, Nov 2025) and the second EUDR delay (402-250); left/S&D/Greens voted against both",
+      "source": "europarl results 2024-2029; esgtoday.com; business-humanrights.org",
+      "last_verified": "2026-09-14"
+    },
+    {
+      "entity": "European Commission",
+      "jurisdiction": "EU",
+      "role": "Executive",
+      "party_or_coalition": "President Ursula von der Leyen (EPP), second term",
+      "lean": "right",
+      "in_power_since": "2024-12-01",
+      "key_stance": "Proposed the Omnibus I simplification package that the Parliament and Council subsequently adopted, cutting CSRD/CSDDD scope and datapoints",
+      "source": "sphera.com; eubelius.com",
+      "last_verified": "2026-09-14"
+    }
+  ],
+  "legislative_forecast": [
+    {
+      "regulation_id": "SEC_Climate",
+      "jurisdiction": "US-Federal",
+      "political_body": "U.S. Securities and Exchange Commission",
+      "trajectory": "rollback",
+      "controlling_lean": "right",
+      "key_actors": "Chair Paul Atkins (Trump-appointed)",
+      "evidence": "SEC ended its legal defense of the 2024 climate disclosure rule in March 2025 under Acting Chair Mark Uyeda, then formally proposed full rescission on 29 May 2026; Atkins called the rule 'a dramatic overreach.' 60-day comment period open at time of writing; all indicators point to full revocation",
+      "confidence": "real",
+      "source": "sec.gov; ballotpedia.org; daypitney.com",
+      "last_verified": "2026-09-14"
+    },
+    {
+      "regulation_id": "FTC_GreenGuides",
+      "jurisdiction": "US-Federal",
+      "political_body": "U.S. Federal Trade Commission",
+      "trajectory": "uncertain_gap",
+      "controlling_lean": "right",
+      "key_actors": "Chair Andrew Ferguson (Trump-appointed)",
+      "evidence": "Ferguson's stated 2026 priorities (children's privacy, healthcare, price transparency, big tech, 'enforcement over rulemaking') do not mention Green Guides in any source found this pass. Absence of evidence is not evidence of a formal rollback \u2014 genuinely unresearched territory, not assumed stable or assumed weakening",
+      "confidence": "gap",
+      "source": "ftc.gov; bipc.com; kslaw.com",
+      "last_verified": "2026-09-14"
+    },
+    {
+      "regulation_id": "SB253",
+      "jurisdiction": "US-California",
+      "political_body": "California State Legislature + Governor",
+      "trajectory": "strengthening",
+      "controlling_lean": "left",
+      "key_actors": "Sen. Scott Wiener (D-San Francisco), author; Gov. Gavin Newsom (D)",
+      "evidence": "Wiener publicly responded to the SEC's rollback saying 'California's climate leadership is more critical than ever' \u2014 an explicit statement positioning the state law as a left-state counterweight to federal-right deregulation. Newsom's term-limited exit in Jan 2027 is a real date to re-check this against",
+      "confidence": "real",
+      "source": "sd11.senate.ca.gov",
+      "last_verified": "2026-09-14"
+    },
+    {
+      "regulation_id": "SB261",
+      "jurisdiction": "US-California",
+      "political_body": "California State Legislature + Governor",
+      "trajectory": "strengthening",
+      "controlling_lean": "left",
+      "key_actors": "Sen. Henry Stern, Sen. Lena Gonzalez (D) \u2014 same Climate Accountability Package as SB253",
+      "evidence": "Passed as part of the same 2023 package with the same Democratic authorship and the same 2026 political defense posture as SB253",
+      "confidence": "real",
+      "source": "sd11.senate.ca.gov; ga-institute.com",
+      "last_verified": "2026-09-14"
+    },
+    {
+      "regulation_id": "EUDR",
+      "jurisdiction": "EU",
+      "political_body": "European Parliament + Council",
+      "trajectory": "weakening",
+      "controlling_lean": "right",
+      "key_actors": "EPP (largest group) + Patriots for Europe + ECR ('right-wing alliance', per Business & Human Rights Resource Centre reporting)",
+      "evidence": "Parliament voted 402-250 for a second delay and simplification (large operators/traders to 30 Dec 2026, SMEs to 30 Jun 2027); a further Commission simplification review is due by end-April 2026, which could reopen EUDR to still more changes \u2014 a concrete near-term date to watch for a third weakening move",
+      "confidence": "real",
+      "source": "esgtoday.com; business-humanrights.org; consilium.europa.eu",
+      "last_verified": "2026-09-14"
+    },
+    {
+      "regulation_id": "CSRD",
+      "jurisdiction": "EU",
+      "political_body": "European Parliament + Council",
+      "trajectory": "weakening",
+      "controlling_lean": "right",
+      "key_actors": "Same EPP + Patriots for Europe + ECR coalition; European Commission (von der Leyen, EPP) proposed the underlying Omnibus I package",
+      "evidence": "Parliament adopted its Omnibus I negotiating position 382-249-13 (13 Nov 2025); Council gave final approval 24 Feb 2026; entered into force 18 Mar 2026. Confirms the previously-unverified figure in docs/data_sources.md: ESRS mandatory datapoints cut from 1073 to 320 (~70% reduction)",
+      "confidence": "real",
+      "source": "sphera.com; clifford chance 2026-02; eubelius.com",
+      "last_verified": "2026-09-14"
+    },
+    {
+      "regulation_id": "CSDDD",
+      "jurisdiction": "EU",
+      "political_body": "European Parliament + Council",
+      "trajectory": "weakening",
+      "controlling_lean": "right",
+      "key_actors": "Same Omnibus I coalition and process as CSRD (single combined package)",
+      "evidence": "Same vote/timeline as CSRD \u2014 CSDDD substantive-requirements scope reduced in the same 382-249-13 Parliament vote and Feb 2026 Council approval",
+      "confidence": "real",
+      "source": "sphera.com; business-humanrights.org",
+      "last_verified": "2026-09-14"
+    },
+    {
+      "regulation_id": "EU_GreenClaims",
+      "jurisdiction": "EU",
+      "political_body": "European Parliament + Council",
+      "trajectory": "uncertain_gap",
+      "controlling_lean": "unresearched",
+      "key_actors": "Not identified this pass",
+      "evidence": "No source found this pass tying a specific political vote or coalition position to this directive specifically, despite the same EPP-led simplification agenda applying pressure to CSRD/CSDDD/EUDR in parallel. Flagged honestly as unresearched rather than assumed to follow the same pattern",
+      "confidence": "gap",
+      "source": "none \u2014 not researched this pass",
+      "last_verified": "2026-09-14"
+    },
+    {
+      "regulation_id": "EmpCo",
+      "jurisdiction": "EU",
+      "political_body": "European Parliament + Council",
+      "trajectory": "uncertain_gap",
+      "controlling_lean": "unresearched",
+      "key_actors": "Not identified this pass",
+      "evidence": "Same gap as EU_GreenClaims \u2014 the Empowering Consumers Directive's specific political dynamics were not researched in this pass",
+      "confidence": "gap",
+      "source": "none \u2014 not researched this pass",
+      "last_verified": "2026-09-14"
+    },
+    {
+      "regulation_id": "PPWR",
+      "jurisdiction": "EU",
+      "political_body": "European Parliament + Council",
+      "trajectory": "uncertain_gap",
+      "controlling_lean": "unresearched",
+      "key_actors": "Not identified this pass",
+      "evidence": "Only general EPR/date context was found this pass, not the specific political vote history or coalition dynamics behind PPWR",
+      "confidence": "gap",
+      "source": "none \u2014 not researched this pass",
+      "last_verified": "2026-09-14"
+    },
+    {
+      "regulation_id": "UK_pEPR",
+      "jurisdiction": "UK",
+      "political_body": "Defra / PackUK",
+      "trajectory": "stable_mixed",
+      "controlling_lean": "left_of_center",
+      "key_actors": "Defra Secretary Dame Angela Eagle (Labour, appointed 20 Jul 2026 under PM Burnham)",
+      "evidence": "Packaging EPR is proceeding into its planned fee-modulation phase for 2026 as scheduled \u2014 continuity from the framework Labour inherited from the prior Conservative government. But Defra separately postponed mandatory kerbside soft-plastics collection from 2027 to 2030, showing delay pressure exists even under a nominally pro-regulation government, most likely administrative-burden/cost driven rather than a partisan reversal",
+      "confidence": "real",
+      "source": "erp-recycling.org; grantthornton.co.uk; hansard.parliament.uk 2026-07-01",
+      "last_verified": "2026-09-14"
+    },
+    {
+      "regulation_id": "UK_PlasticTax",
+      "jurisdiction": "UK",
+      "political_body": "HM Treasury / HMRC",
+      "trajectory": "stable",
+      "controlling_lean": "left_of_center",
+      "key_actors": "HM Treasury (no named political controversy identified)",
+      "evidence": "Rate rises automatically each April in line with CPI inflation (now \u00a3228.82/tonne from 1 Apr 2026); no partisan dispute or reversal found",
+      "confidence": "real",
+      "source": "erp-recycling.org",
       "last_verified": "2026-09-14"
     }
   ],

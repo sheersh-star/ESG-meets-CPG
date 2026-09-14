@@ -38,10 +38,34 @@ def days_until(date_str):
     return (target - date.today()).days
 
 
+def load_political_landscape():
+    return load_csv("political_landscape.csv")
+
+
+def load_legislative_forecast():
+    return load_csv("legislative_forecast.csv")
+
+
 def load_regulatory_calendar():
     rows = load_csv("regulatory_calendar.csv")
+    forecast_by_id = {f["regulation_id"]: f for f in load_legislative_forecast()}
+
     for row in rows:
         row["days_until_key_date"] = days_until(row.get("key_date"))
+        # Join the political forecast onto each calendar row by regulation_id —
+        # the mechanics this whole layer exists to prove out. A row with no
+        # matching forecast entry (shouldn't happen if both CSVs stay in sync,
+        # but the pipeline must not crash if one drifts) gets an explicit
+        # "not_researched" marker rather than silently omitting the field.
+        forecast = forecast_by_id.get(row.get("regulation_id"))
+        if forecast:
+            row["political_trajectory"] = forecast["trajectory"]
+            row["political_lean"] = forecast["controlling_lean"]
+            row["political_actors"] = forecast["key_actors"]
+        else:
+            row["political_trajectory"] = "not_researched"
+            row["political_lean"] = "unresearched"
+            row["political_actors"] = ""
 
     def sort_key(r):
         d = r["days_until_key_date"]
@@ -87,10 +111,12 @@ def summarize(regulations):
 
 
 def generate_data():
-    regulations = load_regulatory_calendar()
+    regulations = load_regulatory_calendar()  # already carries the joined political_* fields
     ingredients = load_ingredient_exposure()
     packaging_sources = load_packaging_sources()
     retailer_risk = load_retailer_risk_assessment()
+    political_landscape = load_political_landscape()
+    legislative_forecast = load_legislative_forecast()
 
     return {
         "last_updated": datetime.now().isoformat(timespec="seconds"),
@@ -98,6 +124,8 @@ def generate_data():
         "ingredient_exposure": ingredients,
         "packaging_data_sources": packaging_sources,
         "retailer_risk_assessment": retailer_risk,
+        "political_landscape": political_landscape,
+        "legislative_forecast": legislative_forecast,
         "summary": summarize(regulations),
     }
 
@@ -114,6 +142,10 @@ def main():
     print(f"  {len(data['ingredient_exposure'])} ingredient exposure rows")
     print(f"  {len(data['packaging_data_sources'])} packaging data sources")
     print(f"  {len(data['retailer_risk_assessment'])} retailer risk assessment rows")
+    print(f"  {len(data['political_landscape'])} political landscape entities")
+    unresearched = sum(1 for f in data['legislative_forecast'] if f['confidence'] == 'gap')
+    print(f"  {len(data['legislative_forecast'])} legislative forecast rows "
+          f"({unresearched} flagged as not-yet-researched)")
 
 
 if __name__ == "__main__":
