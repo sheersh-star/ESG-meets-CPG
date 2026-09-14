@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-14T02:31:22",
+  "last_updated": "2026-09-14T02:36:48",
   "regulatory_calendar": [
     {
       "regulation_id": "EmpCo",
@@ -75,6 +75,21 @@
       "source": "briefing_deck",
       "last_verified": "2026-09-09",
       "days_until_key_date": 109
+    },
+    {
+      "regulation_id": "CSRD",
+      "jurisdiction": "EU",
+      "category": "Reporting",
+      "short_name": "CSRD member state transposition",
+      "official_title": "CSRD amendments \u2014 member state transposition deadline",
+      "celex_or_citation": "32026L0470",
+      "key_date": "2027-03-19",
+      "date_type": "member_state_transposition_deadline",
+      "date_status": "confirmed",
+      "confidence": "real",
+      "source": "DLA Piper, Weil, Covington coverage of Omnibus I",
+      "last_verified": "2026-09-14",
+      "days_until_key_date": 186
     },
     {
       "regulation_id": "EUDR",
@@ -201,14 +216,14 @@
       "jurisdiction": "EU",
       "category": "Reporting",
       "short_name": "Corporate Sustainability Reporting Directive (post-Omnibus)",
-      "official_title": "Directive (EU) 2026/470 (Omnibus I) amending CSRD scope",
+      "official_title": "Directive (EU) 2026/470 (Omnibus I) amending CSRD scope \u2014 published in Official Journal 26 Feb 2026, entered into force 18 Mar 2026",
       "celex_or_citation": "32026L0470",
       "key_date": "2026-03-18",
       "date_type": "entered_into_force",
       "date_status": "confirmed",
       "confidence": "real",
-      "source": "briefing_deck",
-      "last_verified": "2026-09-09",
+      "source": "briefing_deck; corroborated by DLA Piper, Weil, Covington, PwC, Lexology",
+      "last_verified": "2026-09-14",
       "days_until_key_date": -180
     },
     {
@@ -393,16 +408,16 @@
     }
   ],
   "summary": {
-    "total_regulations": 18,
-    "real_confidence_count": 18,
+    "total_regulations": 19,
+    "real_confidence_count": 19,
     "by_jurisdiction": {
-      "EU": 10,
+      "EU": 11,
       "UK": 3,
       "US-California": 3,
       "US-Federal": 2
     },
     "by_status": {
-      "confirmed": 13,
+      "confirmed": 14,
       "estimated": 2,
       "proposed": 1,
       "stalled": 2

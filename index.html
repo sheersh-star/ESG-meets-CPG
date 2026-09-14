@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ESG Meets CPG</title>
+<meta name="description" content="ESG regulatory intelligence console for consumer packaged goods — EU/UK/US compliance calendar, ingredient exposure, and alternative-sourcing recommendations.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <h1>ESG Meets CPG</h1>
+    <p class="tagline">A regulatory intelligence console for consumer packaged goods — what's changing, what it costs, and exactly when it lands, across the EU, UK and US.</p>
+    <div id="summary-strip" class="summary-strip">Loading…</div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section id="error-banner" class="error-banner hidden"></section>
+
+  <section class="panel">
+    <h2>Compliance Calendar</h2>
+    <p class="panel-sub">Sorted by days until each key date. Confirmed dates are corroborated by more than one independent source — see the confidence badge on each row.</p>
+    <div id="calendar-table"></div>
+  </section>
+
+  <section class="panel">
+    <h2>Ingredient &amp; Material Exposure</h2>
+    <p class="panel-sub">What's regulated, and a real alternative-sourcing approach for each.</p>
+    <div id="ingredient-table"></div>
+  </section>
+
+  <section class="panel">
+    <h2>Packaging Data Sources</h2>
+    <p class="panel-sub">Real datasets identified for packaging/recycled-content data — not yet folded into predictions.</p>
+    <div id="packaging-table"></div>
+  </section>
+
+  <section class="panel">
+    <h2>About this data</h2>
+    <p>Built from an internal CPG ESG regulatory briefing (Sep 2026), cross-checked where possible against primary sources (EUR-Lex, CARB, law-firm coverage of the EU Omnibus I directive). Every row carries a source and a confidence label — nothing here is invented. See <code>docs/data_sources.md</code> in the repo for full provenance, what's still unverified, and known gaps.</p>
+  </section>
+
+</main>
+
+<footer class="site-footer wrap">
+  <span id="sync-time"></span>
+  <span>Source: <a href="https://github.com/sheersh-star/esg-meets-cpg" target="_blank" rel="noopener">GitHub</a></span>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
