@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-14T12:44:08",
+  "last_updated": "2026-09-14T13:20:20",
   "regulatory_calendar": [
     {
       "regulation_id": "EmpCo",
@@ -15,9 +15,9 @@
       "source": "briefing_deck",
       "last_verified": "2026-09-09",
       "days_until_key_date": 13,
-      "political_trajectory": "uncertain_gap",
-      "political_lean": "unresearched",
-      "political_actors": "Not identified this pass"
+      "political_trajectory": "stable_mixed",
+      "political_lean": "mixed",
+      "political_actors": "European Commission (infringement enforcement); 20 lagging member states including Belgium, Spain, France, Luxembourg, Netherlands, Portugal"
     },
     {
       "regulation_id": "UK_pEPR",
@@ -195,9 +195,9 @@
       "source": "briefing_deck",
       "last_verified": "2026-09-09",
       "days_until_key_date": 1205,
-      "political_trajectory": "uncertain_gap",
-      "political_lean": "unresearched",
-      "political_actors": "Not identified this pass"
+      "political_trajectory": "stable",
+      "political_lean": "broad_cross_party",
+      "political_actors": "European Parliament (426 in favour, 125 against, 74 abstentions, adopted Nov 2024); Council final adoption Dec 2024"
     },
     {
       "regulation_id": "PPWR",
@@ -213,9 +213,9 @@
       "source": "briefing_deck",
       "last_verified": "2026-09-09",
       "days_until_key_date": -33,
-      "political_trajectory": "uncertain_gap",
-      "political_lean": "unresearched",
-      "political_actors": "Not identified this pass"
+      "political_trajectory": "stable",
+      "political_lean": "broad_cross_party",
+      "political_actors": "European Parliament (426 in favour, 125 against, 74 abstentions, adopted Nov 2024); Council final adoption Dec 2024"
     },
     {
       "regulation_id": "SEC_Climate",
@@ -303,9 +303,9 @@
       "source": "briefing_deck",
       "last_verified": "2026-09-09",
       "days_until_key_date": -451,
-      "political_trajectory": "uncertain_gap",
-      "political_lean": "unresearched",
-      "political_actors": "Not identified this pass"
+      "political_trajectory": "rollback",
+      "political_lean": "right",
+      "political_actors": "EPP (European People's Party) \u2014 sent a formal letter 18 Jun 2025 explicitly requesting withdrawal"
     },
     {
       "regulation_id": "UK_pEPR",
@@ -339,9 +339,9 @@
       "source": "briefing_deck",
       "last_verified": "2026-09-09",
       "days_until_key_date": -1383,
-      "political_trajectory": "uncertain_gap",
+      "political_trajectory": "stable_mixed",
       "political_lean": "right",
-      "political_actors": "Chair Andrew Ferguson (Trump-appointed)"
+      "political_actors": "Chair Andrew Ferguson (Trump-appointed); FTC rulemaking staff (revision pending since Dec 2022)"
     }
   ],
   "ingredient_exposure": [
@@ -772,12 +772,12 @@
       "regulation_id": "FTC_GreenGuides",
       "jurisdiction": "US-Federal",
       "political_body": "U.S. Federal Trade Commission",
-      "trajectory": "uncertain_gap",
+      "trajectory": "stable_mixed",
       "controlling_lean": "right",
-      "key_actors": "Chair Andrew Ferguson (Trump-appointed)",
-      "evidence": "Ferguson's stated 2026 priorities (children's privacy, healthcare, price transparency, big tech, 'enforcement over rulemaking') do not mention Green Guides in any source found this pass. Absence of evidence is not evidence of a formal rollback \u2014 genuinely unresearched territory, not assumed stable or assumed weakening",
-      "confidence": "gap",
-      "source": "ftc.gov; bipc.com; kslaw.com",
+      "key_actors": "Chair Andrew Ferguson (Trump-appointed); FTC rulemaking staff (revision pending since Dec 2022)",
+      "evidence": "The Green Guides revision has been pending since Dec 2022 and remains unrevised as of 2026 \u2014 the change in presidential administration (Biden to Trump) came and went with no update; an FTC spokesperson said in Jan 2025 there was 'nothing new to share.' Consistent with Ferguson's stated 'enforcement over rulemaking' posture. But this does not mean lighter-touch treatment in practice: enforcement under the existing, unrevised guides has tightened through 2024-2025, with carbon-neutral, biodegradable, and unqualified-recyclability claims all triggering real consent decrees. Net effect: the text isn't moving, but enforcement risk under it is not relaxing either \u2014 the same 'stable but with a real countervailing dynamic' pattern as UK_pEPR below",
+      "confidence": "real",
+      "source": "packagingdive.com; theregreview.org; ftc.gov",
       "last_verified": "2026-09-14"
     },
     {
@@ -843,37 +843,37 @@
     {
       "regulation_id": "EU_GreenClaims",
       "jurisdiction": "EU",
-      "political_body": "European Parliament + Council",
-      "trajectory": "uncertain_gap",
-      "controlling_lean": "unresearched",
-      "key_actors": "Not identified this pass",
-      "evidence": "No source found this pass tying a specific political vote or coalition position to this directive specifically, despite the same EPP-led simplification agenda applying pressure to CSRD/CSDDD/EUDR in parallel. Flagged honestly as unresearched rather than assumed to follow the same pattern",
-      "confidence": "gap",
-      "source": "none \u2014 not researched this pass",
+      "political_body": "European Commission",
+      "trajectory": "rollback",
+      "controlling_lean": "right",
+      "key_actors": "EPP (European People's Party) \u2014 sent a formal letter 18 Jun 2025 explicitly requesting withdrawal",
+      "evidence": "The European Commission announced its intent to withdraw the Green Claims Directive proposal on 20 Jun 2025 \u2014 two days after an EPP letter (18 Jun 2025) explicitly called for withdrawal, citing requirements that were 'overly complex, administratively burdensome, and costly.' The same EPP-led simplification pattern that also produced the Omnibus I (CSRD/CSDDD) outcome and the second EUDR delay, now landing on a fourth file. Status remains technically unresolved \u2014 the Commission has not formally terminated the proposal, and Parliament committee chairs have signaled readiness to resume negotiations, so a revival isn't ruled out. The separate, already-adopted EmpCo directive is unaffected and proceeds on its own track (see the EmpCo row below)",
+      "confidence": "real",
+      "source": "lw.com; gorrissenfederspiel.com; eesc.europa.eu",
       "last_verified": "2026-09-14"
     },
     {
       "regulation_id": "EmpCo",
       "jurisdiction": "EU",
-      "political_body": "European Parliament + Council",
-      "trajectory": "uncertain_gap",
-      "controlling_lean": "unresearched",
-      "key_actors": "Not identified this pass",
-      "evidence": "Same gap as EU_GreenClaims \u2014 the Empowering Consumers Directive's specific political dynamics were not researched in this pass",
-      "confidence": "gap",
-      "source": "none \u2014 not researched this pass",
+      "political_body": "European Commission (enforcement) + Member States",
+      "trajectory": "stable_mixed",
+      "controlling_lean": "mixed",
+      "key_actors": "European Commission (infringement enforcement); 20 lagging member states including Belgium, Spain, France, Luxembourg, Netherlands, Portugal",
+      "evidence": "EmpCo (Directive (EU) 2024/825) is a separate, already-adopted directive from the withdrawn Green Claims Directive proposal above \u2014 it is not being weakened. Member states had until 27 Mar 2026 to transpose it into national law; on 28 May 2026 the Commission opened infringement procedures (letters of formal notice) against 20 member states for failing to do so. The rules become binding EU-wide from 27 Sep 2026 regardless of transposition status in the laggard states. Germany and Italy, among others, had fully transposed it as of June 2026. This is a member-state administrative-compliance-lag story, not a left/right ideological vote \u2014 marked 'mixed' rather than forced onto a left/right axis",
+      "confidence": "real",
+      "source": "climatepartner.com; cms.law implementation tracker; xictron.com",
       "last_verified": "2026-09-14"
     },
     {
       "regulation_id": "PPWR",
       "jurisdiction": "EU",
       "political_body": "European Parliament + Council",
-      "trajectory": "uncertain_gap",
-      "controlling_lean": "unresearched",
-      "key_actors": "Not identified this pass",
-      "evidence": "Only general EPR/date context was found this pass, not the specific political vote history or coalition dynamics behind PPWR",
-      "confidence": "gap",
-      "source": "none \u2014 not researched this pass",
+      "trajectory": "stable",
+      "controlling_lean": "broad_cross_party",
+      "key_actors": "European Parliament (426 in favour, 125 against, 74 abstentions, adopted Nov 2024); Council final adoption Dec 2024",
+      "evidence": "PPWR passed with a broad cross-party majority (426-125-74) \u2014 well before the 2025-2026 EPP-led simplification wave that later hit CSRD/CSDDD/EUDR/Green Claims. It entered into force 11 Feb 2025 and applies from 12 Aug 2026 as already scheduled, with recycled-content grading phasing in from 2030. Widely reported as 'the most lobbied political process in the EU's history' during drafting, but the final vote margin shows it wasn't a narrow ideological win the way the later Omnibus-era votes were. Worth re-checking once it's actually in force and post-application lobbying resumes, but no active simplification push was found this pass",
+      "confidence": "real",
+      "source": "howtheyvote.eu vote 168504; foodpackagingforum.org; europen-packaging.eu",
       "last_verified": "2026-09-14"
     },
     {
