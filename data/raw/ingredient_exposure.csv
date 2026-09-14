@@ -1,0 +1,10 @@
+ingredient,regulatory_driver,regulation_id,alternative_approach,confidence,source
+Palm oil,EUDR,EUDR,"RSPO-segregated/identity-preserved palm oil + plot-level geolocation, or shift to algae/fermentation-derived oils (C16 Biosciences, Corbion) or high-oleic sunflower/rapeseed blends",real,briefing_deck
+Cocoa,EUDR + price volatility,EUDR,"Certified deforestation-free origin, blended with palm-free cocoa butter equivalents to stretch supply",real,briefing_deck
+Coffee,EUDR,EUDR,"Direct-trade, geo-traceable smallholder sourcing over blended-origin beans",real,briefing_deck
+Soy (feed & food),EUDR,EUDR,"Certified deforestation-free/Cerrado-protected soy, or EU-grown peas & rapeseed meal",real,briefing_deck
+Cattle & leather,EUDR,EUDR,"Traceable herd registries, or mycelium- and cactus-based leather alternatives",real,briefing_deck
+Natural rubber,EUDR,EUDR,"GPSNR-aligned certified smallholder rubber, or guayule-based synthetic blends",real,briefing_deck
+Wood fibre & pulp,EUDR + PPWR,"EUDR,PPWR","FSC/PEFC chain-of-custody fibre with geolocation data layered in",real,briefing_deck
+Virgin plastic packaging,PPWR + Plastic Tax + pEPR,"PPWR,UK_PlasticTax,UK_pEPR","≥30% recycled content (rPET/rHDPE) or mono-material redesign",real,briefing_deck
+Cotton (textiles/wipes),Emerging due-diligence pressure,,"Certified organic/regenerative or recycled cotton, farm-level traceability",real,briefing_deck
