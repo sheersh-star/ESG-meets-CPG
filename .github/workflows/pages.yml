@@ -1,0 +1,49 @@
+name: Deploy to GitHub Pages
+
+# Rebuilds data/processed/esg_console_data.json from the committed CSVs in
+# data/raw/ (data_pipeline.py is idempotent and has no live data source in
+# this repo, so there's nothing to schedule a re-fetch for — see the other
+# repo's pages.yml for the version that also runs a scheduled live fetch),
+# then publishes the whole repo root as a static site.
+on:
+  push:
+    branches: [main]
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Regenerate esg_console_data.json
+        run: python3 data_pipeline.py
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
