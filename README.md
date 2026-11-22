@@ -22,8 +22,8 @@ deck.css / deck-tobe.css / deck-circular.css / slide-scale.js
                              scale-to-fit script for their embedded slides — see
                              docs/product_lifecycle_methodology.md
 lifecycle-data/              73 fragments (<slug>.html), one per category — each category's three
-                             diagrams, fetched lazily by lifecycle.html on first click rather than
-                             shipped with the page (keeps it under 45KB instead of over 1MB)
+                             diagrams, fetched into a single shared panel on click rather than
+                             shipped with the page (keeps it under 25KB instead of over 1MB)
 data/raw/                   Source data, one file per dataset
   regulatory_calendar.csv       19 rows / 12 regulations, key dates, status, confidence, source
   ingredient_exposure.csv       9 ingredients/materials → regulatory driver → alternative sourcing
@@ -43,12 +43,14 @@ docs/
   product_lifecycle_methodology.md     The as-is/to-be Life Cycle Manifest: what it is and isn't (illustrative, not supplier data)
 ```
 
-The Product Life Cycle Manifest (`lifecycle.html`) is not pipeline-driven like the other pages — its 73 categories' diagrams are embedded as static HTML directly from two separate Claude Slides decks (as-is and to-be), not generated from a CSV, since the content is markup (swim-lane diagrams with SVG connector arrows), not tabular data.
+The Product Life Cycle Manifest (`lifecycle.html`) is not pipeline-driven like the other pages — its 73 categories' diagrams are embedded as static HTML directly from three separate Claude Slides decks (as-is, to-be, and circular economy), not generated from a CSV, since the content is markup (swim-lane and loop diagrams with SVG connector arrows), not tabular data.
 
 ## Status
 
-Data collection + pipeline phase, frontend built and tested locally, not yet deployed/hosted. `data_pipeline.py` runs and produces real structured JSON from the raw CSVs (19/19 regulatory-calendar rows at "real" confidence). See `docs/data_sources.md` for exactly what's verified, what's still only sourced to the original briefing deck, and what's a genuine data gap (RSPO has no open API, company financial data for exposure-prediction isn't wired in yet).
+Live at https://sheersh-star.github.io/ESG-meets-CPG/, deployed via the GitHub Actions workflow in `.github/workflows/pages.yml` on every push to `main` (Netlify was the original host; discontinued in favor of GitHub Pages). `data_pipeline.py` runs and produces real structured JSON from the raw CSVs (19/19 regulatory-calendar rows at "real" confidence). See `docs/data_sources.md` for exactly what's verified, what's still only sourced to the original briefing deck, and what's a genuine data gap (RSPO has no open API, company financial data for exposure-prediction isn't wired in yet).
 
 `docs/rating_methodology.md` and `docs/retailer_risk_assessment.md` cover the company-level ESG rating layer — a real 14-entity risk ranking exists in `data/raw/retailer_risk_assessment.csv`, wired into the pipeline and surfaced in the frontend.
 
-`docs/legislative_forecast_methodology.md` covers the newest layer: no live APIs, everything hand-researched this session — who currently controls each relevant legislative/regulatory body (`political_landscape.csv`) and which direction each of the 12 tracked regulations is actually trending as a result (`legislative_forecast.csv`, joined onto the compliance calendar by `regulation_id`). All 12 regulations now have a researched trajectory (a second research pass closed the 4 that were originally flagged as gaps: PPWR, EU Green Claims, EmpCo, FTC Green Guides).
+`docs/legislative_forecast_methodology.md` covers the legislative layer: no live APIs, everything hand-researched — who currently controls each relevant legislative/regulatory body (`political_landscape.csv`) and which direction each of the 12 tracked regulations is actually trending as a result (`legislative_forecast.csv`, joined onto the compliance calendar by `regulation_id`). All 12 regulations now have a researched trajectory (a second research pass closed the 4 that were originally flagged as gaps: PPWR, EU Green Claims, EmpCo, FTC Green Guides).
+
+`docs/product_lifecycle_methodology.md` covers the newest layer: 73 categories, each carrying the as-is, to-be and circular-economy views of its own life cycle, verbatim from the three decks they were authored in — lazy-loaded from `lifecycle-data/` so the page itself stays light.

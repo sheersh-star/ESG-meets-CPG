@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>About — ESG Meets CPG</title>
-<meta name="description" content="Data sources and provenance behind the ESG Meets CPG regulatory intelligence console.">
+<meta name="description" content="What this console is, how it's sourced, and what's in each of its six pages.">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -34,13 +34,14 @@
   <section id="error-banner" class="error-banner hidden"></section>
 
   <section class="panel">
-    <h2>About this data</h2>
-    <p>Built from an internal CPG ESG regulatory briefing (Sep 2026), cross-checked where possible against primary sources (EUR-Lex, CARB, law-firm coverage of the EU Omnibus I directive). Every row carries a source and a confidence label — nothing here is invented. See <code>docs/data_sources.md</code> in the repo for full provenance, what's still unverified, and known gaps.</p>
+    <h2>About this console</h2>
+    <p>ESG Meets CPG tracks what's changing across EU/UK/US ESG regulation for consumer packaged goods, where that exposure actually sits (by ingredient, by packaging material, by retailer), and what a real alternative looks like — built on the same discipline as the <a href="https://github.com/sheersh-star/frozen_market_stage1" target="_blank" rel="noopener">Frozen Dessert Market Console</a>: real, cited data wherever possible, and gaps labeled honestly rather than guessed at.</p>
+    <p>Most of the console is built from an internal CPG ESG regulatory briefing (Sep 2026), cross-checked where possible against primary sources (EUR-Lex, CARB, law-firm coverage of the EU Omnibus I directive). Every row carries a source and a confidence label — nothing here is invented. The Product Life Cycle Manifest is sourced differently: it's drawn from three separate illustrative decks rather than the briefing (see its own card below). See <code>docs/data_sources.md</code> in the repo for full provenance, what's still unverified, and known gaps.</p>
   </section>
 
   <section class="panel">
     <h2>What's in this console</h2>
-    <p class="panel-sub">Six pages, each backed by the same sourced dataset.</p>
+    <p class="panel-sub">Six pages, each backed by sourced data — labeled by confidence, not presented as settled fact.</p>
     <div class="home-grid">
       <a class="home-card" href="calendar.html">
         <h3>Compliance Calendar</h3>
@@ -56,7 +57,7 @@
       </a>
       <a class="home-card" href="lifecycle.html">
         <h3>Product Life Cycle Manifest</h3>
-        <p>73 UK retail categories across 13 aisles, sourcing to end of life, each with a fork for what happens if it expires or goes unsold.</p>
+        <p>73 UK retail categories, laid out the way a shopper actually walks the store — click a category for its as-is life cycle, a to-be version redesigned for sustainability, and a circular-economy view of how the material could stay in use.</p>
       </a>
       <a class="home-card" href="risk.html">
         <h3>Retailer &amp; Delivery Risk Assessment</h3>
@@ -73,7 +74,7 @@
 
 <footer class="site-footer wrap">
   <span id="sync-time"></span>
-  <span>Source: <a href="https://github.com/sheersh-star/esg-meets-cpg" target="_blank" rel="noopener">GitHub</a></span>
+  <span>Source: <a href="https://github.com/sheersh-star/ESG-meets-CPG" target="_blank" rel="noopener">GitHub</a></span>
 </footer>
 
 <script src="app.js"></script>
