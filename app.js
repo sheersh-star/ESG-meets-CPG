@@ -184,14 +184,33 @@ function renderPackaging(rows) {
 // Product Life Cycle Manifest is static HTML (both decks' own slides,
 // embedded verbatim at build time) — only the expand/collapse behaviour
 // is scripted, independent of the data fetch below.
+function openLifecycleBlock(id) {
+  var block = document.getElementById(id);
+  if (!block) return;
+  var row = block.querySelector('.lc-row');
+  if (row) row.classList.add('open');
+}
+
 function initLifecycleToggle() {
-  var el = document.getElementById('lifecycle-manifest');
-  if (!el) return;
-  el.addEventListener('click', function (e) {
-    var row = e.target.closest('.lc-row');
-    if (!row) return;
-    row.classList.toggle('open');
-  });
+  var manifest = document.getElementById('lifecycle-manifest');
+  if (manifest) {
+    manifest.addEventListener('click', function (e) {
+      var row = e.target.closest('.lc-row');
+      if (!row) return;
+      row.classList.toggle('open');
+    });
+  }
+
+  var plan = document.querySelector('.store-plan');
+  if (plan) {
+    plan.addEventListener('click', function (e) {
+      var item = e.target.closest('.shelf-item');
+      if (!item) return;
+      openLifecycleBlock(item.getAttribute('href').slice(1));
+    });
+  }
+
+  if (location.hash) openLifecycleBlock(location.hash.slice(1));
 }
 
 async function load() {
