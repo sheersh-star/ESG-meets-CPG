@@ -4,6 +4,28 @@
  * data_pipeline.py) and renders it. No framework, no build step.
  */
 
+function initTabs() {
+  var buttons = Array.prototype.slice.call(document.querySelectorAll('.tab-link'));
+  var panels = {};
+  buttons.forEach(function (b) { panels[b.dataset.tab] = document.getElementById('tab-' + b.dataset.tab); });
+
+  function activate(key) {
+    if (!panels[key]) return;
+    buttons.forEach(function (b) { b.setAttribute('aria-selected', b.dataset.tab === key ? 'true' : 'false'); });
+    Object.keys(panels).forEach(function (k) { panels[k].hidden = k !== key; });
+  }
+
+  buttons.forEach(function (b) {
+    b.addEventListener('click', function () {
+      activate(b.dataset.tab);
+      history.replaceState(null, '', '#' + b.dataset.tab);
+    });
+  });
+
+  var fromHash = (location.hash || '').slice(1);
+  if (fromHash && panels[fromHash]) activate(fromHash);
+}
+
 function showError(message) {
   var banner = document.getElementById('error-banner');
   banner.textContent = message;
@@ -251,4 +273,5 @@ async function load() {
   }
 }
 
+initTabs();
 load();
