@@ -260,5 +260,4 @@ async function load() {
   }
 }
 
-initTabs();
 load();
