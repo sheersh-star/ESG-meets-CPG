@@ -1,0 +1,31 @@
+/* Circular-economy deck styling, verbatim from the deck's own deck.css
+   except: product-page rules scoped under .ce so they coexist with the
+   as-is and to-be decks' identically-named classes on the same product
+   page; framing-slide rules (.pc, .pr, .grid4, .note) are left
+   bare/unscoped exactly as authored, since this deck's own framing pages
+   never load the to-be deck's stylesheet alongside this one. */
+.ce .tag { color: #1B7F79; }
+.ce .foot { bottom: 36px; width: 1800px; }
+
+.ce .body { display: flex; gap: 40px; margin-top: 20px; height: 730px; }
+.ce .rwrap { width: 800px; }
+.ce .ring { display: block; }
+.ce .rl { font-size: 24px; margin: 8px 0 0; text-align: center; color: #4B635D; }
+.ce .cards { flex: 1; display: flex; flex-direction: column; gap: 18px; }
+.ce .cc { flex: 1; background: #FFFFFF; border-left: 12px solid #1B7F79; border-radius: 12px; padding: 14px 28px; display: flex; flex-direction: column; justify-content: center; }
+.ce .cc h3 { font-family: 'Space Grotesk', sans-serif; font-size: 34px; margin: 0 0 6px; }
+.ce .cc p { font-size: 30px; line-height: 1.25; margin: 0; }
+.leak { position: absolute; left: 60px; top: 900px; width: 1800px; padding: 14px 28px; background: #17302C; color: #F3F5F2; border-radius: 10px; box-sizing: border-box; }
+.leak p { font-size: 30px; margin: 0; }
+.leak b { color: #7FD1C8; }
+
+/* Framing slides: principles, summary, enablers, limits */
+.pr .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 72px; }
+.pr .grid3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 40px; margin-top: 72px; }
+.pr .grid4 { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 32px; margin-top: 72px; }
+.pc { background: #E4ECE6; border-radius: 16px; padding: 44px 44px 80px; }
+.pc h3 { font-family: 'Space Grotesk', sans-serif; font-size: 40px; line-height: 1.15; margin: 0 0 16px; }
+.pc p, .pc li { font-size: 34px; line-height: 1.35; margin: 0 0 10px; }
+.pc .num { font-family: 'Space Grotesk', sans-serif; font-size: 120px; font-weight: 700; color: #1B7F79; line-height: 1; }
+.pr .note { font-size: 32px; margin: 72px 0 0; padding: 28px 36px; background: #17302C; color: #F3F5F2; border-radius: 12px; }
+.pr .note b { color: #7FD1C8; }

@@ -16,10 +16,11 @@ refresh_live_sources.sh     Live-pull commands to run yourself (this sandbox has
 index.html, calendar.html, ingredients.html, packaging.html, lifecycle.html,
 risk.html, forecast.html    Zero-dependency static frontend, one page per section
 styles.css / app.js         Shared stylesheet and script across all pages
-deck.css / deck-tobe.css / slide-scale.js
-                             The as-is and to-be Product Life Cycle decks' own styling (unmodified
-                             except for scoping/hiding speaker notes) and the scale-to-fit script for
-                             their embedded slides — see docs/product_lifecycle_methodology.md
+deck.css / deck-tobe.css / deck-circular.css / slide-scale.js
+                             The as-is, to-be and circular-economy Product Life Cycle decks' own
+                             styling (unmodified except for scoping/hiding speaker notes) and the
+                             scale-to-fit script for their embedded slides — see
+                             docs/product_lifecycle_methodology.md
 data/raw/                   Source data, one file per dataset
   regulatory_calendar.csv       19 rows / 12 regulations, key dates, status, confidence, source
   ingredient_exposure.csv       9 ingredients/materials → regulatory driver → alternative sourcing
