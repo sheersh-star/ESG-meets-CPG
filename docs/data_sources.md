@@ -32,3 +32,6 @@ This dataset now reflects your researched briefing **plus independent corroborat
 
 ## Related: political/legislative layer
 `data/raw/political_landscape.csv` and `data/raw/legislative_forecast.csv` are a separate, newer layer — who controls each relevant body and which direction each regulation is trending as a result. All 12 tracked regulations now have a researched trajectory; see `docs/legislative_forecast_methodology.md` for the method and its own honest limitations (single-pass research, not a finished political-science analysis).
+
+## Related: product life cycle layer
+`data/raw/product_lifecycle.csv` is a different kind of layer — not regulatory data at all, but 73 UK retail categories each traced sourcing-to-end-of-life, illustrating where in a category's path the packaging/food-waste exposure the rest of this console tracks actually sits. Qualitative and illustrative, not supplier data; see `docs/product_lifecycle_methodology.md`.

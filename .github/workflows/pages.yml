@@ -1,9 +1,6 @@
 name: Deploy to GitHub Pages
 
-# DORMANT — moved out of .github/workflows/ on purpose, so GitHub Actions
-# can't see or run it (it only recognizes files directly under
-# .github/workflows/). Currently hosted on Vercel instead. To reactivate:
-# `git mv .github/dormant-workflows/pages.yml .github/workflows/pages.yml`.
+# Netlify discontinued; this is now the live deployment path.
 #
 # Rebuilds data/processed/esg_console_data.json from the committed CSVs in
 # data/raw/ (data_pipeline.py is idempotent and has no live data source in

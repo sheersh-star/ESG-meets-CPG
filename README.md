@@ -23,6 +23,8 @@ data/raw/                   Source data, one file per dataset
   political_landscape.csv       7 real political entities (who controls what, US/UK/EU) and their stance
   legislative_forecast.csv      12 rows, one per regulation — trajectory (strengthening/weakening/
                                  rollback/stable/gap) joined onto regulatory_calendar.csv by regulation_id
+  product_lifecycle.csv         73 UK retail categories / 13 aisles, sourcing to end of life, each
+                                 with a two-way fork (normal use vs. expired/unsold) — illustrative
 data/processed/
   esg_console_data.json       Pipeline output — regenerate with `python3 data_pipeline.py`
 docs/
@@ -30,6 +32,7 @@ docs/
   rating_methodology.md              Draft methodology for a future retailer/product ESG rating
   retailer_risk_assessment.md        Reasoning + solutions behind the retailer risk ranking
   legislative_forecast_methodology.md  Who controls what, and which way each regulation is trending
+  product_lifecycle_methodology.md     What the life cycle manifest is and isn't (illustrative, not supplier data)
 ```
 
 ## Status
