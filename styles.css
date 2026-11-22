@@ -145,6 +145,17 @@ code { font-family: var(--font-mono); background: var(--surface-2); padding: 1px
 
 footer.site-footer { border-top: 1px solid var(--line); padding: 24px 0 48px; font-family: var(--font-mono); font-size: 11px; color: var(--muted-2); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
 
+/* ---- home page link grid ---- */
+.home-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 14px; }
+.home-card {
+  display: block; background: var(--surface); border: 1px solid var(--line); border-radius: 8px;
+  padding: 18px 20px; text-decoration: none; color: var(--ink);
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+.home-card:hover { border-color: var(--accent); transform: translateY(-1px); }
+.home-card h3 { font-family: var(--font-display); font-size: 1.05rem; margin: 0 0 8px; color: var(--ink); }
+.home-card p { font-size: 0.88rem; color: var(--muted); margin: 0; }
+
 /* ---------- Product Life Cycle Manifest ---------- */
 .lc-aisle-head { display: flex; align-items: baseline; gap: 12px; }
 .lc-aisle-num { font-family: var(--font-mono); font-size: 11px; color: var(--muted-2); background: var(--surface-2); border: 1px solid var(--line); border-radius: 4px; padding: 2px 8px; }
