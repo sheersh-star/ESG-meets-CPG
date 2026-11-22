@@ -181,14 +181,38 @@ function renderPackaging(rows) {
   }).join('');
 }
 
-// Product Life Cycle Manifest is static HTML (both decks' own slides,
-// embedded verbatim at build time) — only the expand/collapse behaviour
-// is scripted, independent of the data fetch below.
+// Product Life Cycle Manifest ships only its 73 row headers and the store
+// map on first load — each row's three diagrams (~15KB apiece, mostly
+// inline SVG) live in their own file under lifecycle-data/ and are
+// fetched only when that row is actually opened, so the page itself
+// stays light instead of shipping all 73 categories' diagrams up front.
+function loadLifecycleDetail(block) {
+  var detail = block.querySelector('.lc-detail');
+  if (!detail || detail.dataset.loaded) return;
+  var src = block.getAttribute('data-detail-src');
+  detail.innerHTML = '<p class="lc-loading">Loading…</p>';
+  fetch(src)
+    .then(function (res) {
+      if (!res.ok) throw new Error('Server responded ' + res.status);
+      return res.text();
+    })
+    .then(function (html) {
+      detail.innerHTML = html;
+      detail.dataset.loaded = 'true';
+      if (window.scaleSlideFrames) window.scaleSlideFrames(detail);
+    })
+    .catch(function (err) {
+      console.error(err);
+      detail.innerHTML = '<p class="lc-loading">Could not load this category — try reloading the page.</p>';
+    });
+}
+
 function openLifecycleBlock(id) {
   var block = document.getElementById(id);
   if (!block) return;
   var row = block.querySelector('.lc-row');
   if (row) row.classList.add('open');
+  loadLifecycleDetail(block);
 }
 
 function initLifecycleToggle() {
@@ -197,7 +221,9 @@ function initLifecycleToggle() {
     manifest.addEventListener('click', function (e) {
       var row = e.target.closest('.lc-row');
       if (!row) return;
+      var opening = !row.classList.contains('open');
       row.classList.toggle('open');
+      if (opening) loadLifecycleDetail(row.closest('.lc-block'));
     });
   }
 

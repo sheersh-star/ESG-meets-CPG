@@ -21,6 +21,9 @@ deck.css / deck-tobe.css / deck-circular.css / slide-scale.js
                              styling (unmodified except for scoping/hiding speaker notes) and the
                              scale-to-fit script for their embedded slides — see
                              docs/product_lifecycle_methodology.md
+lifecycle-data/              73 fragments (<slug>.html), one per category — each category's three
+                             diagrams, fetched lazily by lifecycle.html on first click rather than
+                             shipped with the page (keeps it under 45KB instead of over 1MB)
 data/raw/                   Source data, one file per dataset
   regulatory_calendar.csv       19 rows / 12 regulations, key dates, status, confidence, source
   ingredient_exposure.csv       9 ingredients/materials → regulatory driver → alternative sourcing

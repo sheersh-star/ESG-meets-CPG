@@ -10,6 +10,8 @@
 
 All three diagrams are the decks' own markup and connector-arrow/ring SVGs, not redrawn — `deck.css`, `deck-tobe.css` and `deck-circular.css` are the decks' own stylesheets (the to-be and circular ones scoped under `.tb`/`.ce` respectively so their identically-named classes, including the circular deck's reused `c01`..`c73` slide ids, don't collide with the as-is deck's on the same page), scaled to fit any screen width via `.slide-frame`/`.slide-canvas` and `slide-scale.js`.
 
+**Loaded lazily.** `lifecycle.html` itself only ships the 73 row headers and the store-plan map; each row's three diagrams (`lifecycle-data/<slug>.html`, ~15KB apiece — mostly inline SVG) are fetched on first click and cached in the DOM after that. 73 categories × 3 diagrams bundled directly into the page once made it over 1MB and noticeably slow to open; this keeps the initial page under 45KB regardless of how many categories exist.
+
 ## Source and status
 
 The as-is deck is a hand-authored retail-category model (a 73-slide deck, one diagram per category, in the same aisle order as this manifest), not from a live regulatory or retailer data source. The to-be and circular-economy decks are separate, later companions grounded in the "My Sustainability Beliefs" one-page playbook — their own thesis/principles/shared-layer/limits (to-be) and principles/summary/enablers/limits (circular) framing lives in the decks themselves, not reproduced here.
