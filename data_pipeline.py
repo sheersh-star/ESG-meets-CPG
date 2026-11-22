@@ -93,37 +93,6 @@ def load_retailer_risk_assessment():
     return rows
 
 
-def load_product_lifecycle():
-    """73 UK retail categories, sourcing through end of life — same six-stage
-    shape for every row (Sourcing, Processing, Packaging, Delivery, Retail,
-    Use), each with an actor and a card of text, plus a two-way fork at end
-    of life: normal use vs. expired/unsold. Grouped by aisle for the
-    frontend, same order the categories are shelved in."""
-    rows = load_csv("product_lifecycle.csv")
-    for row in rows:
-        row["num"] = int(row["num"])
-        stages = []
-        for s in range(1, 7):
-            stages.append({
-                "actor": row.pop(f"s{s}_actor"),
-                "text": row.pop(f"s{s}_text"),
-            })
-        row["stages"] = stages
-        row["end"] = {"actor": row.pop("end_actor"), "text": row.pop("end_text")}
-        row["expiry"] = {"actor": row.pop("exp_actor"), "text": row.pop("exp_text")}
-    rows.sort(key=lambda r: r["num"])
-
-    aisles = []
-    seen = {}
-    for row in rows:
-        aisle = row["aisle"]
-        if aisle not in seen:
-            seen[aisle] = {"aisle": aisle, "categories": []}
-            aisles.append(seen[aisle])
-        seen[aisle]["categories"].append(row)
-    return aisles
-
-
 def summarize(regulations):
     by_jurisdiction = {}
     by_status = {}
@@ -148,7 +117,6 @@ def generate_data():
     retailer_risk = load_retailer_risk_assessment()
     political_landscape = load_political_landscape()
     legislative_forecast = load_legislative_forecast()
-    product_lifecycle = load_product_lifecycle()
 
     return {
         "last_updated": datetime.now().isoformat(timespec="seconds"),
@@ -158,7 +126,6 @@ def generate_data():
         "retailer_risk_assessment": retailer_risk,
         "political_landscape": political_landscape,
         "legislative_forecast": legislative_forecast,
-        "product_lifecycle": product_lifecycle,
         "summary": summarize(regulations),
     }
 
@@ -179,9 +146,6 @@ def main():
     unresearched = sum(1 for f in data['legislative_forecast'] if f['confidence'] == 'gap')
     print(f"  {len(data['legislative_forecast'])} legislative forecast rows "
           f"({unresearched} flagged as not-yet-researched)")
-    category_count = sum(len(a['categories']) for a in data['product_lifecycle'])
-    print(f"  {category_count} product lifecycle categories across "
-          f"{len(data['product_lifecycle'])} aisles")
 
 
 if __name__ == "__main__":

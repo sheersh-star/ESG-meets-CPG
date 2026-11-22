@@ -180,23 +180,21 @@ footer.site-footer { border-top: 1px solid var(--line); padding: 24px 0 48px; fo
 .lc-detail { display: none; grid-column: 1 / -1; background: var(--surface); border: 1px solid var(--line); border-top: none; padding: 18px 20px 20px; margin-bottom: 8px; }
 .lc-row.open + .lc-detail { display: block; }
 
-.lc-hotspot { margin: 0 0 16px; font-size: 0.92rem; }
-.lc-hotspot strong { color: var(--accent-2); }
+/* Both decks' own slides, embedded verbatim — same swim-lane grid, cards
+   and connector arrows the decks shipped with (deck.css / deck-tobe.css),
+   scaled to fit via .slide-frame/.slide-canvas + slide-scale.js. */
+.diagram-label {
+  font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase;
+  color: var(--accent-2); margin: 0 0 8px;
+}
+.diagram-label:not(:first-child) { margin-top: 24px; }
 
-.lc-steps { display: flex; flex-wrap: wrap; gap: 10px; margin: 0 0 16px; }
-.lc-step { flex: 1 1 150px; background: var(--surface-2); border-radius: 6px; padding: 10px 12px; }
-.lc-step-num { display: inline-block; width: 18px; height: 18px; line-height: 18px; text-align: center; border-radius: 50%; background: var(--ink); color: var(--paper); font-family: var(--font-mono); font-size: 10.5px; font-weight: 600; margin-bottom: 6px; }
-.lc-step-actor { display: block; font-weight: 600; font-size: 0.85rem; }
-.lc-step-text { display: block; font-size: 0.85rem; color: var(--muted); margin-top: 2px; }
+.slide-frame {
+  position: relative; width: 100%; aspect-ratio: 1920 / 1080;
+  overflow: hidden; border: 1px solid var(--line); border-radius: 8px; background: #F3F5F2;
+}
+.slide-canvas { position: absolute; top: 0; left: 0; width: 1920px; height: 1080px; transform-origin: top left; }
+.slide-canvas > section { width: 1920px; height: 1080px; box-sizing: border-box; }
 
-.lc-fork { display: grid; grid-template-columns: 1fr; gap: 10px; margin: 0 0 14px; }
-@media (min-width: 560px) { .lc-fork { grid-template-columns: 1fr 1fr; } }
-.lc-fork .fork-branch { border: 1px solid var(--line); border-radius: 6px; padding: 12px 14px; }
-.lc-fork .fork-branch.main { border-left-width: 3px; border-left-color: var(--accent); }
-.lc-fork .fork-branch.alt { border-style: dashed; border-left-width: 3px; border-left-color: var(--danger); }
-.lc-fork .branch-label { font-family: var(--font-mono); font-size: 10.5px; text-transform: uppercase; letter-spacing: 0.03em; margin: 0 0 6px; }
-.lc-fork .fork-branch.main .branch-label { color: var(--accent); }
-.lc-fork .fork-branch.alt .branch-label { color: var(--danger); }
-.lc-fork .fork-branch p:last-child { margin: 0; font-size: 0.88rem; }
-
-.lc-caveat { font-family: var(--font-mono); font-size: 11px; color: var(--muted-2); margin: 0; line-height: 1.6; }
+.lc-caveat { font-family: var(--font-mono); font-size: 11px; color: var(--muted-2); margin: 10px 0 0; line-height: 1.6; }
+.lc-caveat b { color: var(--ink); }

@@ -13,7 +13,13 @@ Built from `CPG_ESG_Regulatory_Briefing.pdf` + `CPG_ESG_Regulatory_Briefing_Pres
 ```
 data_pipeline.py            Reads data/raw/*.csv, writes data/processed/esg_console_data.json
 refresh_live_sources.sh     Live-pull commands to run yourself (this sandbox has no network access)
-index.html / styles.css / app.js   Zero-dependency static frontend
+index.html, calendar.html, ingredients.html, packaging.html, lifecycle.html,
+risk.html, forecast.html    Zero-dependency static frontend, one page per section
+styles.css / app.js         Shared stylesheet and script across all pages
+deck.css / deck-tobe.css / slide-scale.js
+                             The as-is and to-be Product Life Cycle decks' own styling (unmodified
+                             except for scoping/hiding speaker notes) and the scale-to-fit script for
+                             their embedded slides — see docs/product_lifecycle_methodology.md
 data/raw/                   Source data, one file per dataset
   regulatory_calendar.csv       19 rows / 12 regulations, key dates, status, confidence, source
   ingredient_exposure.csv       9 ingredients/materials → regulatory driver → alternative sourcing
@@ -23,8 +29,6 @@ data/raw/                   Source data, one file per dataset
   political_landscape.csv       7 real political entities (who controls what, US/UK/EU) and their stance
   legislative_forecast.csv      12 rows, one per regulation — trajectory (strengthening/weakening/
                                  rollback/stable/gap) joined onto regulatory_calendar.csv by regulation_id
-  product_lifecycle.csv         73 UK retail categories / 13 aisles, sourcing to end of life, each
-                                 with a two-way fork (normal use vs. expired/unsold) — illustrative
 data/processed/
   esg_console_data.json       Pipeline output — regenerate with `python3 data_pipeline.py`
 docs/
@@ -32,8 +36,10 @@ docs/
   rating_methodology.md              Draft methodology for a future retailer/product ESG rating
   retailer_risk_assessment.md        Reasoning + solutions behind the retailer risk ranking
   legislative_forecast_methodology.md  Who controls what, and which way each regulation is trending
-  product_lifecycle_methodology.md     What the life cycle manifest is and isn't (illustrative, not supplier data)
+  product_lifecycle_methodology.md     The as-is/to-be Life Cycle Manifest: what it is and isn't (illustrative, not supplier data)
 ```
+
+The Product Life Cycle Manifest (`lifecycle.html`) is not pipeline-driven like the other pages — its 73 categories' diagrams are embedded as static HTML directly from two separate Claude Slides decks (as-is and to-be), not generated from a CSV, since the content is markup (swim-lane diagrams with SVG connector arrows), not tabular data.
 
 ## Status
 

@@ -1,0 +1,33 @@
+/* To-be deck styling, verbatim from the deck's own deck.css except: scoped
+   under .tb / .pr so it coexists with the as-is deck's identically-named
+   classes on the same product page (both decks use .card, .hot, .chip,
+   etc.), and only restating the specific properties that actually differ
+   from the as-is deck; shared values (card size, chip grid, stage
+   layout...) already apply correctly from the as-is deck.css loaded
+   alongside it. */
+.tb .tag { color: #2F6B3A; }
+.tb .chip .n { color: #9ED3A5; }
+.tb .lane.l0 { background: #E4ECE6; }
+.tb .lane.l1 { background: #EDF2EE; }
+.tb .card { background: #E6F4E8; border-color: #2F6B3A; }
+.tb .card.exp { background: #F2F7DD; border: 2px dashed #2F6B3A; }
+.tb .card.end { background: #D3EBD6; border-color: #1F4D2A; }
+.tb .hot { margin: 8px 0 0; padding: 8px 20px; }
+.tb .hot p { font-size: 24px; line-height: 1.2; margin: 0; }
+.tb .hot b { color: #9ED3A5; }
+.tb .foot { bottom: 36px; }
+
+/* Framing slides (thesis/principles/shared/limits) */
+.pr .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 72px; }
+.pr .grid3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 40px; margin-top: 72px; }
+.pc { background: #E4ECE6; border-radius: 16px; padding: 44px 44px 52px; }
+.pc h3 { font-family: 'Space Grotesk', sans-serif; font-size: 40px; line-height: 1.15; margin: 0 0 16px; }
+.pc p, .pc li { font-size: 34px; line-height: 1.35; margin: 0 0 10px; }
+.pr .note { font-size: 32px; margin: 72px 0 0; padding: 28px 36px; background: #17302C; color: #F3F5F2; border-radius: 12px; }
+.pr .note b { color: #9ED3A5; }
+
+/* Cover-style dark slide (thesis.html) */
+section.dark { background: #17302C; color: #F3F5F2; padding: 128px; display: flex; flex-direction: column; justify-content: center; }
+section.dark h1 { font-family: 'Space Grotesk', sans-serif; font-size: 104px; line-height: 1.05; font-weight: 700; margin: 0 0 32px; }
+section.dark .sub { font-size: 44px; line-height: 1.25; margin: 0 0 48px; color: #CFE3DC; }
+section.dark .meta { font-size: 28px; margin: 0; color: #9ED3A5; }

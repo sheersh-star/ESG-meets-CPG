@@ -181,58 +181,12 @@ function renderPackaging(rows) {
   }).join('');
 }
 
-var STORAGE_VAR = { fresh: '--accent', chilled: '--storage-chilled', frozen: '--storage-frozen', ambient: '--accent-2' };
-
-function storageVar(storage) {
-  var s = storage.toLowerCase();
-  if (s.indexOf('fresh') !== -1) return STORAGE_VAR.fresh;
-  if (s.indexOf('frozen') !== -1) return STORAGE_VAR.frozen;
-  if (s.indexOf('chilled') !== -1) return STORAGE_VAR.chilled;
-  return STORAGE_VAR.ambient;
-}
-
-function renderLifecycleStep(step, i) {
-  return '<div class="lc-step">' +
-    '<span class="lc-step-num">' + (i + 1) + '</span>' +
-    '<span class="lc-step-actor">' + step.actor + '</span>' +
-    '<span class="lc-step-text">' + step.text + '</span>' +
-  '</div>';
-}
-
-function renderLifecycleCategory(cat) {
-  return '<div class="lc-block">' +
-    '<button type="button" class="lc-row">' +
-      '<span class="lc-name">' + cat.category + '</span>' +
-      '<span class="lc-storage"><span class="lc-dot" style="background:var(' + storageVar(cat.storage) + ')"></span>' + cat.storage + '</span>' +
-    '</button>' +
-    '<div class="lc-detail">' +
-      '<p class="lc-hotspot"><strong>Hotspot.</strong> ' + cat.hotspot + '</p>' +
-      '<div class="lc-steps">' + cat.stages.map(renderLifecycleStep).join('') + '</div>' +
-      '<div class="lc-fork">' +
-        '<div class="fork-branch main">' +
-          '<p class="branch-label">After normal use</p>' +
-          '<p>' + cat.end.actor + ': ' + cat.end.text + '</p>' +
-        '</div>' +
-        '<div class="fork-branch alt">' +
-          '<p class="branch-label">If it expires or goes unsold</p>' +
-          '<p>' + cat.expiry.actor + ': ' + cat.expiry.text + '</p>' +
-        '</div>' +
-      '</div>' +
-      '<p class="lc-caveat">' + cat.caveat + '</p>' +
-    '</div>' +
-  '</div>';
-}
-
-function renderLifecycle(aisles) {
+// Product Life Cycle Manifest is static HTML (both decks' own slides,
+// embedded verbatim at build time) — only the expand/collapse behaviour
+// is scripted, independent of the data fetch below.
+function initLifecycleToggle() {
   var el = document.getElementById('lifecycle-manifest');
   if (!el) return;
-  el.innerHTML = aisles.map(function (a) {
-    var num = a.aisle.split(' ')[0];
-    var name = a.aisle.slice(num.length + 1);
-    return '<h3 class="subhead lc-aisle-head"><span class="lc-aisle-num">Aisle ' + num + '</span>' + name + '</h3>' +
-      '<div class="lc-grid">' + a.categories.map(renderLifecycleCategory).join('') + '</div>';
-  }).join('');
-
   el.addEventListener('click', function (e) {
     var row = e.target.closest('.lc-row');
     if (!row) return;
@@ -252,7 +206,6 @@ async function load() {
     renderRisk(data.retailer_risk_assessment);
     renderLandscape(data.political_landscape);
     renderForecast(data.legislative_forecast);
-    renderLifecycle(data.product_lifecycle);
     document.getElementById('sync-time').textContent = 'Synced ' + data.last_updated;
   } catch (err) {
     console.error(err);
@@ -260,4 +213,5 @@ async function load() {
   }
 }
 
+initLifecycleToggle();
 load();

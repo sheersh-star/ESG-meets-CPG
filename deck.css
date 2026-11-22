@@ -1,0 +1,32 @@
+section{box-sizing:border-box;font-family:'Inter',sans-serif;color:#17302C;background:#F3F5F2}
+section.dark{background:#17302C;color:#F3F5F2;padding:128px;display:flex;flex-direction:column;justify-content:center}
+section.dark h1{font-family:'Space Grotesk',sans-serif;font-size:112px;line-height:1.05;font-weight:700;margin:0 0 32px}
+section.dark .sub{font-size:44px;line-height:1.25;margin:0 0 48px;color:#CFE3DC}
+section.dark .meta{font-size:28px;margin:0;color:#E0A030}
+section.lc{padding:44px 60px 0;position:relative;height:1080px}
+.lc .top{display:flex;justify-content:space-between;align-items:center;height:64px}
+.lc h2{font-family:'Space Grotesk',sans-serif;font-size:52px;line-height:1.1;font-weight:700;margin:0}
+.lc .tag{font-size:26px;margin:0;color:#1F7A6D;font-weight:600}
+.chips{display:grid;grid-template-columns:180px repeat(7,230px);height:46px;margin-top:8px;margin-bottom:10px}
+.chip{margin:0 10px;height:46px;background:#17302C;color:#F3F5F2;font-size:24px;font-weight:600;line-height:46px;text-align:center;border-radius:8px;white-space:nowrap}
+.chip .n{color:#E0A030}
+.map{position:relative;width:1790px;height:708px}
+.lane{display:grid;grid-template-columns:180px repeat(7,230px);height:114px;margin-bottom:4px;border-radius:8px}
+.lane.l0{background:#E6ECE8}.lane.l1{background:#EEF2EF}
+.lab{font-size:24px;font-weight:700;line-height:1.1;padding:6px 10px;display:flex;align-items:center}
+.cell{padding:3px 10px}
+.card{height:108px;box-sizing:border-box;background:#FFFFFF;border:2px solid #1F7A6D;border-radius:8px;font-size:24px;line-height:1.05;padding:2px 8px;display:flex;align-items:center}
+.card.exp{background:#F7E4DC;border:2px dashed #A8442F}
+.card.end{background:#FBE7BF;border-color:#B7791F}
+.flow{position:absolute;left:0;top:0}
+.hot{font-size:26px;margin:12px 0 0;padding:12px 20px;background:#17302C;color:#F3F5F2;border-radius:8px;width:1750px}
+.hot b{color:#E0A030}
+.foot{position:absolute;left:60px;bottom:40px;width:1790px;display:flex;justify-content:space-between}
+.foot p{font-size:24px;margin:0;color:#4B635D}
+.how .cols{display:flex;gap:80px;margin-top:40px}
+.how .col{flex:1}
+.how h3{font-size:36px;margin:0 0 20px;font-family:'Space Grotesk',sans-serif}
+.how li,.how p{font-size:30px;line-height:1.4;margin:0 0 6px}
+.how .gap{margin-top:24px}
+/* Speaker notes, hidden in the rendered deck; same text surfaced as the page's own field note. */
+aside{display:none}
