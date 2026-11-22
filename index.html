@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>ESG Meets CPG</title>
-<meta name="description" content="ESG regulatory intelligence console for consumer packaged goods — EU/UK/US compliance calendar, ingredient exposure, and alternative-sourcing recommendations.">
+<title>About — ESG Meets CPG</title>
+<meta name="description" content="Data sources and provenance behind the ESG Meets CPG regulatory intelligence console.">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -17,15 +17,15 @@
   </div>
 </header>
 
-<nav class="tab-nav" role="tablist" aria-label="Console sections">
+<nav class="tab-nav" aria-label="Console sections">
   <div class="wrap tab-row">
-    <button type="button" class="tab-link" role="tab" data-tab="calendar" aria-selected="true">Compliance Calendar</button>
-    <button type="button" class="tab-link" role="tab" data-tab="ingredients" aria-selected="false">Ingredient Exposure</button>
-    <button type="button" class="tab-link" role="tab" data-tab="packaging" aria-selected="false">Packaging Sources</button>
-    <button type="button" class="tab-link" role="tab" data-tab="risk" aria-selected="false">Retailer Risk</button>
-    <button type="button" class="tab-link" role="tab" data-tab="forecast" aria-selected="false">Legislative Forecast</button>
-    <button type="button" class="tab-link" role="tab" data-tab="lifecycle" aria-selected="false">Life Cycle Manifest</button>
-    <button type="button" class="tab-link" role="tab" data-tab="about" aria-selected="false">About</button>
+    <a class="tab-link" href="index.html" aria-current="page">About</a>
+    <a class="tab-link" href="calendar.html">Compliance Calendar</a>
+    <a class="tab-link" href="ingredients.html">Ingredient Exposure</a>
+    <a class="tab-link" href="packaging.html">Packaging Sources</a>
+    <a class="tab-link" href="lifecycle.html">Life Cycle Manifest</a>
+    <a class="tab-link" href="risk.html">Retailer Risk</a>
+    <a class="tab-link" href="forecast.html">Legislative Forecast</a>
   </div>
 </nav>
 
@@ -33,47 +33,7 @@
 
   <section id="error-banner" class="error-banner hidden"></section>
 
-  <section class="panel" id="tab-calendar" role="tabpanel">
-    <h2>Compliance Calendar</h2>
-    <p class="panel-sub">Sorted by days until each key date. Confirmed dates are corroborated by more than one independent source — see the confidence badge on each row. Each row also carries the political trajectory behind it, from the Legislative &amp; Political Forecast tab.</p>
-    <div id="calendar-table"></div>
-  </section>
-
-  <section class="panel" id="tab-ingredients" role="tabpanel" hidden>
-    <h2>Ingredient &amp; Material Exposure</h2>
-    <p class="panel-sub">What's regulated, and a real alternative-sourcing approach for each.</p>
-    <div id="ingredient-table"></div>
-  </section>
-
-  <section class="panel" id="tab-packaging" role="tabpanel" hidden>
-    <h2>Packaging Data Sources</h2>
-    <p class="panel-sub">Real datasets identified for packaging/recycled-content data — not yet folded into predictions.</p>
-    <div id="packaging-table"></div>
-  </section>
-
-  <section class="panel" id="tab-risk" role="tabpanel" hidden>
-    <h2>Retailer &amp; Delivery Risk Assessment</h2>
-    <p class="panel-sub">14 real grocery and delivery entities, ranked from least to most likely to face a regulatory or ESG-grounds legal action. Grounded in real ownership, disclosure and enforcement history — analytical judgment on cited evidence, not a computed score. See <code>docs/retailer_risk_assessment.md</code> for full reasoning and honest gaps.</p>
-    <div id="risk-summary" class="risk-summary"></div>
-    <div id="risk-table"></div>
-  </section>
-
-  <section class="panel" id="tab-forecast" role="tabpanel" hidden>
-    <h2>Legislative &amp; Political Forecast</h2>
-    <p class="panel-sub">Built without any live APIs — this sandbox has no outbound network access, so every fact below was researched by hand this session (WebSearch) and saved as static data, same as the rest of this console. Who currently controls each relevant body, and which direction each regulation is actually moving as a result, grounded in real votes, appointments and public statements — not punditry. All 12 tracked regulations now have a researched trajectory. See <code>docs/legislative_forecast_methodology.md</code> for the full method and remaining honest limitations (this is single-pass research, not a finished political-science analysis).</p>
-    <h3 class="subhead">Who controls what</h3>
-    <div id="landscape-table"></div>
-    <h3 class="subhead">Trajectory by regulation</h3>
-    <div id="forecast-table"></div>
-  </section>
-
-  <section class="panel" id="tab-lifecycle" role="tabpanel" hidden>
-    <h2>Product Life Cycle Manifest</h2>
-    <p class="panel-sub">73 UK retail categories, sourcing through end of life, organised by the aisle a shopper actually walks. Each one traces who touches the product and in what order, then forks: what happens after normal use, versus what happens if it expires or goes unsold — the branch that drives most of a category's real packaging and food-waste exposure. Qualitative and illustrative, not supplier data; click a category to open it.</p>
-    <div id="lifecycle-manifest"></div>
-  </section>
-
-  <section class="panel" id="tab-about" role="tabpanel" hidden>
+  <section class="panel">
     <h2>About this data</h2>
     <p>Built from an internal CPG ESG regulatory briefing (Sep 2026), cross-checked where possible against primary sources (EUR-Lex, CARB, law-firm coverage of the EU Omnibus I directive). Every row carries a source and a confidence label — nothing here is invented. See <code>docs/data_sources.md</code> in the repo for full provenance, what's still unverified, and known gaps.</p>
   </section>

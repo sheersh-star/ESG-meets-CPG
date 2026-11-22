@@ -4,28 +4,6 @@
  * data_pipeline.py) and renders it. No framework, no build step.
  */
 
-function initTabs() {
-  var buttons = Array.prototype.slice.call(document.querySelectorAll('.tab-link'));
-  var panels = {};
-  buttons.forEach(function (b) { panels[b.dataset.tab] = document.getElementById('tab-' + b.dataset.tab); });
-
-  function activate(key) {
-    if (!panels[key]) return;
-    buttons.forEach(function (b) { b.setAttribute('aria-selected', b.dataset.tab === key ? 'true' : 'false'); });
-    Object.keys(panels).forEach(function (k) { panels[k].hidden = k !== key; });
-  }
-
-  buttons.forEach(function (b) {
-    b.addEventListener('click', function () {
-      activate(b.dataset.tab);
-      history.replaceState(null, '', '#' + b.dataset.tab);
-    });
-  });
-
-  var fromHash = (location.hash || '').slice(1);
-  if (fromHash && panels[fromHash]) activate(fromHash);
-}
-
 function showError(message) {
   var banner = document.getElementById('error-banner');
   banner.textContent = message;
@@ -49,6 +27,7 @@ function fmtDays(days) {
 
 function renderSummary(summary) {
   var el = document.getElementById('summary-strip');
+  if (!el) return;
   var parts = [
     '<strong>' + summary.total_regulations + '</strong> regulations tracked',
     '<strong>' + summary.real_confidence_count + '/' + summary.total_regulations + '</strong> at real confidence'
@@ -78,6 +57,7 @@ function trajectoryLine(r) {
 
 function renderCalendar(rows) {
   var el = document.getElementById('calendar-table');
+  if (!el) return;
   el.innerHTML = rows.map(function (r) {
     var cls = urgencyClass(r.days_until_key_date);
     return '<div class="reg-row ' + cls + '">' +
@@ -98,6 +78,7 @@ function renderCalendar(rows) {
 
 function renderIngredients(rows) {
   var el = document.getElementById('ingredient-table');
+  if (!el) return;
   el.innerHTML = rows.map(function (r) {
     return '<div class="ing-card">' +
       '<div class="ing-name">' + r.ingredient + '</div>' +
@@ -119,6 +100,7 @@ function riskLabel(band) {
 
 function renderRiskSummary(rows) {
   var el = document.getElementById('risk-summary');
+  if (!el) return;
   var counts = {};
   rows.forEach(function (r) {
     counts[r.risk_band] = (counts[r.risk_band] || 0) + 1;
@@ -132,6 +114,7 @@ function renderRiskSummary(rows) {
 function renderRisk(rows) {
   renderRiskSummary(rows);
   var el = document.getElementById('risk-table');
+  if (!el) return;
   el.innerHTML = rows.map(function (r) {
     var cls = riskClass(r.risk_band);
     var pillars = r.primary_exposure_pillars.split(';').map(function (p) { return p.trim(); });
@@ -156,6 +139,7 @@ function renderRisk(rows) {
 
 function renderLandscape(rows) {
   var el = document.getElementById('landscape-table');
+  if (!el) return;
   el.innerHTML = rows.map(function (r) {
     return '<div class="landscape-card">' +
       '<div class="landscape-head">' +
@@ -170,6 +154,7 @@ function renderLandscape(rows) {
 
 function renderForecast(rows) {
   var el = document.getElementById('forecast-table');
+  if (!el) return;
   el.innerHTML = rows.map(function (r) {
     var isGap = r.confidence === 'gap';
     var glyph = TRAJECTORY_GLYPH[r.trajectory] || '?';
@@ -186,6 +171,7 @@ function renderForecast(rows) {
 
 function renderPackaging(rows) {
   var el = document.getElementById('packaging-table');
+  if (!el) return;
   el.innerHTML = rows.map(function (r) {
     return '<div class="pkg-card">' +
       '<a href="' + r.access_url + '" target="_blank" rel="noopener">' + r.dataset_name + '</a>' +
@@ -239,6 +225,7 @@ function renderLifecycleCategory(cat) {
 
 function renderLifecycle(aisles) {
   var el = document.getElementById('lifecycle-manifest');
+  if (!el) return;
   el.innerHTML = aisles.map(function (a) {
     var num = a.aisle.split(' ')[0];
     var name = a.aisle.slice(num.length + 1);
