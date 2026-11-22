@@ -173,44 +173,36 @@ footer.site-footer { border-top: 1px solid var(--line); padding: 24px 0 48px; fo
   border: 1px solid var(--line); border-radius: 6px; background: var(--surface);
   scroll-snap-align: start; overflow: hidden;
 }
-.aisle-sign { background: var(--ink); color: var(--paper); text-align: center; padding: 8px 5px; }
-.aisle-sign-num { display: block; font-family: var(--font-display); font-size: 1.25rem; font-weight: 700; line-height: 1; }
-.aisle-sign-name { display: block; font-family: var(--font-mono); font-size: 9.5px; letter-spacing: 0.02em; text-transform: uppercase; margin-top: 4px; line-height: 1.2; }
+.aisle-sign { background: var(--ink); color: var(--paper); text-align: center; padding: 10px 6px; }
+.aisle-sign-name { display: block; font-family: var(--font-display); font-size: 0.82rem; font-weight: 700; line-height: 1.25; }
 .shelf { display: flex; flex-direction: column; gap: 3px; padding: 7px; flex: 1; }
 .shelf-item {
-  display: flex; align-items: center; gap: 6px; padding: 7px 8px;
-  background: var(--surface-2); border-radius: 3px; font-size: 0.78rem;
-  color: var(--ink); text-decoration: none; line-height: 1.25; cursor: pointer;
+  display: flex; align-items: center; gap: 6px; padding: 7px 8px; width: 100%;
+  background: var(--surface-2); border: none; border-radius: 3px; font: inherit; font-size: 0.78rem;
+  color: var(--ink); text-decoration: none; line-height: 1.25; text-align: left; cursor: pointer;
 }
 .shelf-item:hover { background: var(--accent); color: var(--paper); }
+.shelf-item.active { background: var(--accent); color: var(--paper); font-weight: 600; }
 .item-dot { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; }
 
-.lc-aisle-head { display: flex; align-items: baseline; gap: 12px; }
-.lc-aisle-num { font-family: var(--font-mono); font-size: 11px; color: var(--muted-2); background: var(--surface-2); border: 1px solid var(--line); border-radius: 4px; padding: 2px 8px; }
-
-.lc-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 2px; margin: 0 0 24px; }
-.lc-block { grid-column: 1 / -1; display: contents; }
-
-.lc-row {
-  display: flex; align-items: center; justify-content: space-between; gap: 10px;
-  width: 100%; background: var(--surface); border: 1px solid var(--line); border-radius: 0;
-  padding: 11px 14px; text-align: left; font: inherit; color: var(--ink); cursor: pointer;
+/* Clicking a shelf item fills and reveals this one shared panel, right
+   below the store plan — not a separate list repeating all 73 categories. */
+.lc-detail-panel {
+  margin: 20px 0 0; border: 1px solid var(--line); border-radius: 8px;
+  background: var(--surface); padding: 20px 22px;
 }
-.lc-row:hover { border-color: var(--accent); }
-.lc-row .lc-name { font-size: 0.95rem; }
-.lc-row.open { border-color: var(--accent); background: var(--surface-2); }
-.lc-row.open::after { content: "\2212"; color: var(--muted-2); font-family: var(--font-mono); }
-.lc-row::after { content: "+"; color: var(--muted-2); font-family: var(--font-mono); flex-shrink: 0; }
+.lc-detail-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 4px; }
+.lc-detail-title { font-family: var(--font-display); font-size: 1.1rem; font-weight: 700; }
+.lc-detail-close {
+  background: none; border: none; font-size: 1.3rem; line-height: 1; padding: 2px 6px;
+  color: var(--muted-2); cursor: pointer; font-family: var(--font-body);
+}
+.lc-detail-close:hover { color: var(--ink); }
 
-.lc-storage { display: flex; align-items: center; gap: 6px; font-family: var(--font-mono); font-size: 11px; color: var(--muted-2); text-transform: uppercase; letter-spacing: 0.02em; white-space: nowrap; }
-.lc-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
-
-.lc-detail { display: none; grid-column: 1 / -1; background: var(--surface); border: 1px solid var(--line); border-top: none; padding: 18px 20px 20px; margin-bottom: 8px; }
-.lc-row.open + .lc-detail { display: block; }
-
-/* Both decks' own slides, embedded verbatim — same swim-lane grid, cards
-   and connector arrows the decks shipped with (deck.css / deck-tobe.css),
-   scaled to fit via .slide-frame/.slide-canvas + slide-scale.js. */
+/* All three decks' own slides, embedded verbatim — same swim-lane grid,
+   cards and connector arrows the decks shipped with (deck.css /
+   deck-tobe.css / deck-circular.css), scaled to fit via
+   .slide-frame/.slide-canvas + slide-scale.js. */
 .diagram-label {
   font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase;
   color: var(--accent-2); margin: 0 0 8px;

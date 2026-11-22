@@ -181,62 +181,68 @@ function renderPackaging(rows) {
   }).join('');
 }
 
-// Product Life Cycle Manifest ships only its 73 row headers and the store
-// map on first load — each row's three diagrams (~15KB apiece, mostly
-// inline SVG) live in their own file under lifecycle-data/ and are
-// fetched only when that row is actually opened, so the page itself
-// stays light instead of shipping all 73 categories' diagrams up front.
-function loadLifecycleDetail(block) {
-  var detail = block.querySelector('.lc-detail');
-  if (!detail || detail.dataset.loaded) return;
-  var src = block.getAttribute('data-detail-src');
-  detail.innerHTML = '<p class="lc-loading">Loading…</p>';
+// Product Life Cycle Manifest: the store plan is the only list — clicking
+// a category fills and reveals one shared panel below it with that
+// category's three diagrams (~15KB, mostly inline SVG), fetched from its
+// own file under lifecycle-data/ rather than shipped with the page.
+function openLifecycleCategory(item) {
+  var panel = document.getElementById('lifecycle-detail');
+  var title = document.getElementById('lifecycle-detail-title');
+  var body = document.getElementById('lifecycle-detail-body');
+  if (!panel || !body) return;
+
+  document.querySelectorAll('.shelf-item.active').forEach(function (el) {
+    el.classList.remove('active');
+  });
+  item.classList.add('active');
+
+  title.textContent = item.getAttribute('data-title');
+  panel.hidden = false;
+  var src = item.getAttribute('data-src');
+
+  if (panel.dataset.loadedSrc === src) return;
+  body.innerHTML = '<p class="lc-loading">Loading…</p>';
   fetch(src)
     .then(function (res) {
       if (!res.ok) throw new Error('Server responded ' + res.status);
       return res.text();
     })
     .then(function (html) {
-      detail.innerHTML = html;
-      detail.dataset.loaded = 'true';
-      if (window.scaleSlideFrames) window.scaleSlideFrames(detail);
+      body.innerHTML = html;
+      panel.dataset.loadedSrc = src;
+      if (window.scaleSlideFrames) window.scaleSlideFrames(body);
     })
     .catch(function (err) {
       console.error(err);
-      detail.innerHTML = '<p class="lc-loading">Could not load this category — try reloading the page.</p>';
+      body.innerHTML = '<p class="lc-loading">Could not load this category — try reloading the page.</p>';
     });
-}
-
-function openLifecycleBlock(id) {
-  var block = document.getElementById(id);
-  if (!block) return;
-  var row = block.querySelector('.lc-row');
-  if (row) row.classList.add('open');
-  loadLifecycleDetail(block);
 }
 
 function initLifecycleToggle() {
-  var manifest = document.getElementById('lifecycle-manifest');
-  if (manifest) {
-    manifest.addEventListener('click', function (e) {
-      var row = e.target.closest('.lc-row');
-      if (!row) return;
-      var opening = !row.classList.contains('open');
-      row.classList.toggle('open');
-      if (opening) loadLifecycleDetail(row.closest('.lc-block'));
-    });
-  }
-
   var plan = document.querySelector('.store-plan');
   if (plan) {
     plan.addEventListener('click', function (e) {
       var item = e.target.closest('.shelf-item');
       if (!item) return;
-      openLifecycleBlock(item.getAttribute('href').slice(1));
+      openLifecycleCategory(item);
     });
   }
 
-  if (location.hash) openLifecycleBlock(location.hash.slice(1));
+  var closeBtn = document.getElementById('lifecycle-detail-close');
+  if (closeBtn) {
+    closeBtn.addEventListener('click', function () {
+      document.getElementById('lifecycle-detail').hidden = true;
+      document.querySelectorAll('.shelf-item.active').forEach(function (el) {
+        el.classList.remove('active');
+      });
+    });
+  }
+
+  if (location.hash) {
+    var slug = location.hash.replace(/^#(cat-)?/, '');
+    var match = document.querySelector('.shelf-item[data-slug="' + slug + '"]');
+    if (match) openLifecycleCategory(match);
+  }
 }
 
 async function load() {
