@@ -1,5 +1,5 @@
 /*
- * ESG Meets CPG — frontend
+ * ESG Meets CPG; frontend
  * Zero-dependency: fetches data/processed/esg_console_data.json (built by
  * data_pipeline.py) and renders it. No framework, no build step.
  */
@@ -163,7 +163,7 @@ function renderForecast(rows) {
         '<span class="forecast-id">' + r.regulation_id + '</span>' +
         '<span class="forecast-trajectory">' + glyph + ' ' + r.trajectory.replace(/_/g, ' ') + ' &middot; ' + r.controlling_lean.replace(/_/g, ' ') + '</span>' +
       '</div>' +
-      '<div class="forecast-actors">' + r.political_body + ' — ' + r.key_actors + '</div>' +
+      '<div class="forecast-actors">' + r.political_body + '; ' + r.key_actors + '</div>' +
       '<div class="forecast-evidence">' + r.evidence + '</div>' +
     '</div>';
   }).join('');
@@ -181,7 +181,7 @@ function renderPackaging(rows) {
   }).join('');
 }
 
-// Product Life Cycle Manifest: the store plan is the only list — clicking
+// Product Life Cycle Manifest: the store plan is the only list; clicking
 // a category fills and reveals one shared panel below it with that
 // category's three diagrams (~15KB, mostly inline SVG), fetched from its
 // own file under lifecycle-data/ rather than shipped with the page.
@@ -214,7 +214,7 @@ function openLifecycleCategory(item) {
     })
     .catch(function (err) {
       console.error(err);
-      body.innerHTML = '<p class="lc-loading">Could not load this category — try reloading the page.</p>';
+      body.innerHTML = '<p class="lc-loading">Could not load this category; try reloading the page.</p>';
     });
 }
 

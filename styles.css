@@ -1,4 +1,4 @@
-/* ESG Meets CPG — shared stylesheet */
+/* ESG Meets CPG; shared stylesheet */
 
 :root {
   --paper: #F4F2EC;
@@ -121,7 +121,7 @@ code { font-family: var(--font-mono); background: var(--surface-2); padding: 1px
 .subhead { font-family: var(--font-display); font-size: 1.05rem; margin: 26px 0 14px; }
 .subhead:first-of-type { margin-top: 0; }
 
-/* Political trajectory/lean are identity, not severity — deliberately no
+/* Political trajectory/lean are identity, not severity; deliberately no
    red/green coding here (red=left in the UK but red=right in the US, so
    any color mapping would be regionally backwards for someone). Direction
    is shown with a glyph + word, lean with plain text; color stays neutral. */
@@ -186,7 +186,7 @@ footer.site-footer { border-top: 1px solid var(--line); padding: 24px 0 48px; fo
 .item-dot { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; }
 
 /* Clicking a shelf item fills and reveals this one shared panel, right
-   below the store plan — not a separate list repeating all 73 categories. */
+   below the store plan; not a separate list repeating all 73 categories. */
 .lc-detail-panel {
   margin: 20px 0 0; border: 1px solid var(--line); border-radius: 8px;
   background: var(--surface); padding: 20px 22px;
@@ -199,7 +199,7 @@ footer.site-footer { border-top: 1px solid var(--line); padding: 24px 0 48px; fo
 }
 .lc-detail-close:hover { color: var(--ink); }
 
-/* All three decks' own slides, embedded verbatim — same swim-lane grid,
+/* All three decks' own slides, embedded verbatim; same swim-lane grid,
    cards and connector arrows the decks shipped with (deck.css /
    deck-tobe.css / deck-circular.css), scaled to fit via
    .slide-frame/.slide-canvas + slide-scale.js. */
@@ -223,7 +223,7 @@ footer.site-footer { border-top: 1px solid var(--line); padding: 24px 0 48px; fo
 /* ---------- phone layout ---------- */
 /* Everything above is flex/grid-based and already reflows; this tightens
    spacing for a phone's narrower viewport and fixes the one real overflow
-   case — .reg-main/.risk-main's min-width (260/280px) could exceed the
+   case; .reg-main/.risk-main's min-width (260/280px) could exceed the
    content width left after .wrap's own padding on a 320px-wide phone. */
 @media (max-width: 680px) {
   .wrap { padding: 0 16px; }
