@@ -143,7 +143,7 @@ code { font-family: var(--font-mono); background: var(--surface-2); padding: 1px
 .forecast-evidence { font-size: 0.87rem; margin-top: 8px; }
 .forecast-card.gap { border-style: dashed; opacity: 0.85; }
 
-/* Strategic Recommendations: one card per regulation (12, not the 19 date
+/* Strategic Recommendations: one card per regulation (12, not the 20 date
    rows below), grounded directly in that regulation's own trajectory
    evidence on the Legislative & Political Forecast page; not a separate
    judgment call layered on top. */

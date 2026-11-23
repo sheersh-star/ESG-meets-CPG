@@ -12,11 +12,11 @@ This session's sandbox has no outbound network access (same constraint documente
 
 ## What the join actually does (the "mechanics" part)
 
-`data_pipeline.py` reads `legislative_forecast.csv` and joins it onto every row of `regulatory_calendar.csv` by `regulation_id` — the same key both files already share. Each calendar row comes out of the pipeline carrying three new fields: `political_trajectory`, `political_lean`, and `political_actors`. If a regulation_id in the calendar has no matching forecast row, the join fails soft: it stamps `"not_researched"` rather than crashing or silently dropping the field. This was tested by running the pipeline and printing every row's join result — all 19 calendar rows across the 12 regulations resolved correctly.
+`data_pipeline.py` reads `legislative_forecast.csv` and joins it onto every row of `regulatory_calendar.csv` by `regulation_id` — the same key both files already share. Each calendar row comes out of the pipeline carrying three new fields: `political_trajectory`, `political_lean`, and `political_actors`. If a regulation_id in the calendar has no matching forecast row, the join fails soft: it stamps `"not_researched"` rather than crashing or silently dropping the field. This was tested by running the pipeline and printing every row's join result; all 20 calendar rows across the 12 regulations resolve correctly (verified again 2026-11-23 after adding the EU Green Claims withdrawal-listing row).
 
 ## Strategic recommendations, added to the Compliance Calendar tab
 
-`data/raw/legislative_forecast.csv` carries a 12th column, `strategic_recommendation`, one per regulation (12 rows, not the 19 date rows in the calendar). It's surfaced at the top of `calendar.html`, above the calendar table itself, via `renderRecommendations()` in `app.js`.
+`data/raw/legislative_forecast.csv` carries a 12th column, `strategic_recommendation`, one per regulation (12 rows, not the 20 date rows in the calendar). It's surfaced at the top of `calendar.html`, above the calendar table itself, via `renderRecommendations()` in `app.js`.
 
 Each recommendation is authored judgment grounded directly in that row's own `trajectory`/`evidence` fields; it names no fact not already cited elsewhere in this file or in `regulatory_calendar.csv`. Same framing as the short/long-term actions on the Retailer Risk page: analytical judgment on cited evidence, not a separate, independently-sourced data layer.
 

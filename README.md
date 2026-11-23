@@ -25,7 +25,7 @@ lifecycle-data/              73 fragments (<slug>.html), one per category — ea
                              diagrams, fetched into a single shared panel on click rather than
                              shipped with the page (keeps it under 25KB instead of over 1MB)
 data/raw/                   Source data, one file per dataset
-  regulatory_calendar.csv       19 rows / 12 regulations, key dates, status, confidence, source
+  regulatory_calendar.csv       20 rows / 12 regulations, key dates, status, confidence, source
   ingredient_exposure.csv       9 ingredients/materials → regulatory driver → alternative sourcing
   packaging_data_sources.csv    4 real UK packaging datasets (NPWD, Producer Register, WRAP)
   retailer_risk_assessment.csv  14 real grocery/delivery entities ranked least-to-most likely to face
@@ -49,7 +49,7 @@ The Product Life Cycle Manifest (`lifecycle.html`) is not pipeline-driven like t
 
 ## Status
 
-Live at https://sheersh-star.github.io/ESG-meets-CPG/, deployed via the GitHub Actions workflow in `.github/workflows/pages.yml` on every push to `main` (Netlify was the original host; discontinued in favor of GitHub Pages). `data_pipeline.py` runs and produces real structured JSON from the raw CSVs (19/19 regulatory-calendar rows at "real" confidence). See `docs/data_sources.md` for exactly what's verified, what's still only sourced to the original briefing deck, and what's a genuine data gap (RSPO has no open API, company financial data for exposure-prediction isn't wired in yet).
+Live at https://sheersh-star.github.io/ESG-meets-CPG/, deployed via the GitHub Actions workflow in `.github/workflows/pages.yml` on every push to `main` (Netlify was the original host; discontinued in favor of GitHub Pages). `data_pipeline.py` runs and produces real structured JSON from the raw CSVs (19/20 regulatory-calendar rows at "real" confidence; the one "estimated" row is the EU Green Claims Directive's projected withdrawal-effective date, not yet formally confirmed). See `docs/data_sources.md` for exactly what's verified, what's still only sourced to the original briefing deck, and what's a genuine data gap (RSPO has no open API, company financial data for exposure-prediction isn't wired in yet).
 
 `docs/rating_methodology.md` and `docs/retailer_risk_assessment.md` cover the company-level ESG rating layer — a real 14-entity risk ranking exists in `data/raw/retailer_risk_assessment.csv`, wired into the pipeline and surfaced in the frontend.
 
