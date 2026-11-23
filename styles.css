@@ -143,6 +143,17 @@ code { font-family: var(--font-mono); background: var(--surface-2); padding: 1px
 .forecast-evidence { font-size: 0.87rem; margin-top: 8px; }
 .forecast-card.gap { border-style: dashed; opacity: 0.85; }
 
+/* Strategic Recommendations: one card per regulation (12, not the 19 date
+   rows below), grounded directly in that regulation's own trajectory
+   evidence on the Legislative & Political Forecast page; not a separate
+   judgment call layered on top. */
+.rec-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 12px; margin-bottom: 36px; }
+.rec-card { background: var(--surface); border: 1px solid var(--line); border-left: 4px solid var(--accent); border-radius: 8px; padding: 14px 18px; }
+.rec-head { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; }
+.rec-id { font-weight: 600; font-family: var(--font-mono); font-size: 0.85rem; }
+.rec-trajectory { font-family: var(--font-mono); font-size: 10.5px; color: var(--muted-2); white-space: nowrap; }
+.rec-text { font-size: 0.88rem; color: var(--muted); margin-top: 8px; }
+
 footer.site-footer { border-top: 1px solid var(--line); padding: 24px 0 48px; font-family: var(--font-mono); font-size: 11px; color: var(--muted-2); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
 
 /* ---- home page link grid ---- */

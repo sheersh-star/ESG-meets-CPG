@@ -169,6 +169,21 @@ function renderForecast(rows) {
   }).join('');
 }
 
+function renderRecommendations(rows) {
+  var el = document.getElementById('recommendations-table');
+  if (!el) return;
+  el.innerHTML = rows.map(function (r) {
+    var glyph = TRAJECTORY_GLYPH[r.trajectory] || '?';
+    return '<div class="rec-card">' +
+      '<div class="rec-head">' +
+        '<span class="rec-id">' + r.regulation_id + '</span>' +
+        '<span class="rec-trajectory">' + glyph + ' ' + r.trajectory.replace(/_/g, ' ') + '</span>' +
+      '</div>' +
+      '<div class="rec-text">' + r.strategic_recommendation + '</div>' +
+    '</div>';
+  }).join('');
+}
+
 function renderPackaging(rows) {
   var el = document.getElementById('packaging-table');
   if (!el) return;
@@ -251,6 +266,7 @@ async function load() {
     if (!res.ok) throw new Error('Server responded ' + res.status);
     var data = await res.json();
     renderSummary(data.summary);
+    renderRecommendations(data.legislative_forecast);
     renderCalendar(data.regulatory_calendar);
     renderIngredients(data.ingredient_exposure);
     renderPackaging(data.packaging_data_sources);

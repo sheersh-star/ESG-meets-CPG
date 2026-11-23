@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-11-22T12:44:41",
+  "last_updated": "2026-11-23T07:07:02",
   "regulatory_calendar": [
     {
       "regulation_id": "EUDR",
@@ -14,7 +14,7 @@
       "confidence": "real",
       "source": "EUR-Lex",
       "last_verified": "2026-09-14",
-      "days_until_key_date": 38,
+      "days_until_key_date": 37,
       "political_trajectory": "weakening",
       "political_lean": "right",
       "political_actors": "EPP (largest group) + Patriots for Europe + ECR ('right-wing alliance', per Business & Human Rights Resource Centre reporting)"
@@ -32,7 +32,7 @@
       "confidence": "real",
       "source": "briefing_deck",
       "last_verified": "2026-09-09",
-      "days_until_key_date": 40,
+      "days_until_key_date": 39,
       "political_trajectory": "strengthening",
       "political_lean": "left",
       "political_actors": "Sen. Scott Wiener (D-San Francisco), author; Gov. Gavin Newsom (D)"
@@ -50,7 +50,7 @@
       "confidence": "real",
       "source": "DLA Piper, Weil, Covington coverage of Omnibus I",
       "last_verified": "2026-09-14",
-      "days_until_key_date": 117,
+      "days_until_key_date": 116,
       "political_trajectory": "weakening",
       "political_lean": "right",
       "political_actors": "Same EPP + Patriots for Europe + ECR coalition; European Commission (von der Leyen, EPP) proposed the underlying Omnibus I package"
@@ -68,7 +68,7 @@
       "confidence": "real",
       "source": "EUR-Lex",
       "last_verified": "2026-09-14",
-      "days_until_key_date": 220,
+      "days_until_key_date": 219,
       "political_trajectory": "weakening",
       "political_lean": "right",
       "political_actors": "EPP (largest group) + Patriots for Europe + ECR ('right-wing alliance', per Business & Human Rights Resource Centre reporting)"
@@ -86,7 +86,7 @@
       "confidence": "real",
       "source": "briefing_deck",
       "last_verified": "2026-09-09",
-      "days_until_key_date": 405,
+      "days_until_key_date": 404,
       "political_trajectory": "weakening",
       "political_lean": "right",
       "political_actors": "Same EPP + Patriots for Europe + ECR coalition; European Commission (von der Leyen, EPP) proposed the underlying Omnibus I package"
@@ -104,7 +104,7 @@
       "confidence": "real",
       "source": "briefing_deck",
       "last_verified": "2026-09-09",
-      "days_until_key_date": 612,
+      "days_until_key_date": 611,
       "political_trajectory": "weakening",
       "political_lean": "right",
       "political_actors": "Same Omnibus I coalition and process as CSRD (single combined package)"
@@ -122,7 +122,7 @@
       "confidence": "real",
       "source": "briefing_deck",
       "last_verified": "2026-09-09",
-      "days_until_key_date": 977,
+      "days_until_key_date": 976,
       "political_trajectory": "weakening",
       "political_lean": "right",
       "political_actors": "Same Omnibus I coalition and process as CSRD (single combined package)"
@@ -140,7 +140,7 @@
       "confidence": "real",
       "source": "briefing_deck",
       "last_verified": "2026-09-09",
-      "days_until_key_date": 1136,
+      "days_until_key_date": 1135,
       "political_trajectory": "stable",
       "political_lean": "broad_cross_party",
       "political_actors": "European Parliament (426 in favour, 125 against, 74 abstentions, adopted Nov 2024); Council final adoption Dec 2024"
@@ -158,7 +158,7 @@
       "confidence": "real",
       "source": "briefing_deck; corroborated by velaw.com, morganlewis.com, gtlaw.com, sullcrom.com (CARB deferral coverage)",
       "last_verified": "2026-09-14",
-      "days_until_key_date": -12,
+      "days_until_key_date": -13,
       "political_trajectory": "strengthening",
       "political_lean": "left",
       "political_actors": "Sen. Scott Wiener (D-San Francisco), author; Gov. Gavin Newsom (D)"
@@ -176,7 +176,7 @@
       "confidence": "real",
       "source": "briefing_deck",
       "last_verified": "2026-09-09",
-      "days_until_key_date": -52,
+      "days_until_key_date": -53,
       "political_trajectory": "stable_mixed",
       "political_lean": "left_of_center",
       "political_actors": "Defra Secretary Dame Angela Eagle (Labour, appointed 20 Jul 2026 under PM Burnham)"
@@ -194,7 +194,7 @@
       "confidence": "real",
       "source": "briefing_deck",
       "last_verified": "2026-09-09",
-      "days_until_key_date": -56,
+      "days_until_key_date": -57,
       "political_trajectory": "stable_mixed",
       "political_lean": "mixed",
       "political_actors": "European Commission (infringement enforcement); 20 lagging member states including Belgium, Spain, France, Luxembourg, Netherlands, Portugal"
@@ -212,7 +212,7 @@
       "confidence": "real",
       "source": "briefing_deck",
       "last_verified": "2026-09-09",
-      "days_until_key_date": -102,
+      "days_until_key_date": -103,
       "political_trajectory": "stable",
       "political_lean": "broad_cross_party",
       "political_actors": "European Parliament (426 in favour, 125 against, 74 abstentions, adopted Nov 2024); Council final adoption Dec 2024"
@@ -230,7 +230,7 @@
       "confidence": "real",
       "source": "briefing_deck",
       "last_verified": "2026-09-09",
-      "days_until_key_date": -172,
+      "days_until_key_date": -173,
       "political_trajectory": "rollback",
       "political_lean": "right",
       "political_actors": "Chair Paul Atkins (Trump-appointed)"
@@ -248,7 +248,7 @@
       "confidence": "real",
       "source": "briefing_deck",
       "last_verified": "2026-09-09",
-      "days_until_key_date": -235,
+      "days_until_key_date": -236,
       "political_trajectory": "stable",
       "political_lean": "left_of_center",
       "political_actors": "HM Treasury (no named political controversy identified)"
@@ -266,7 +266,7 @@
       "confidence": "real",
       "source": "briefing_deck; corroborated by DLA Piper, Weil, Covington, PwC, Lexology",
       "last_verified": "2026-09-14",
-      "days_until_key_date": -249,
+      "days_until_key_date": -250,
       "political_trajectory": "weakening",
       "political_lean": "right",
       "political_actors": "Same EPP + Patriots for Europe + ECR coalition; European Commission (von der Leyen, EPP) proposed the underlying Omnibus I package"
@@ -284,7 +284,7 @@
       "confidence": "real",
       "source": "briefing_deck",
       "last_verified": "2026-09-09",
-      "days_until_key_date": -369,
+      "days_until_key_date": -370,
       "political_trajectory": "strengthening",
       "political_lean": "left",
       "political_actors": "Sen. Henry Stern, Sen. Lena Gonzalez (D) \u2014 same Climate Accountability Package as SB253"
@@ -302,7 +302,7 @@
       "confidence": "real",
       "source": "briefing_deck",
       "last_verified": "2026-09-09",
-      "days_until_key_date": -520,
+      "days_until_key_date": -521,
       "political_trajectory": "rollback",
       "political_lean": "right",
       "political_actors": "EPP (European People's Party) \u2014 sent a formal letter 18 Jun 2025 explicitly requesting withdrawal"
@@ -320,7 +320,7 @@
       "confidence": "real",
       "source": "briefing_deck",
       "last_verified": "2026-09-09",
-      "days_until_key_date": -600,
+      "days_until_key_date": -601,
       "political_trajectory": "stable_mixed",
       "political_lean": "left_of_center",
       "political_actors": "Defra Secretary Dame Angela Eagle (Labour, appointed 20 Jul 2026 under PM Burnham)"
@@ -338,7 +338,7 @@
       "confidence": "real",
       "source": "briefing_deck",
       "last_verified": "2026-09-09",
-      "days_until_key_date": -1452,
+      "days_until_key_date": -1453,
       "political_trajectory": "stable_mixed",
       "political_lean": "right",
       "political_actors": "Chair Andrew Ferguson (Trump-appointed); FTC rulemaking staff (revision pending since Dec 2022)"
@@ -766,7 +766,8 @@
       "evidence": "SEC ended its legal defense of the 2024 climate disclosure rule in March 2025 under Acting Chair Mark Uyeda, then formally proposed full rescission on 29 May 2026; Atkins called the rule 'a dramatic overreach.' 60-day comment period open at time of writing; all indicators point to full revocation",
       "confidence": "real",
       "source": "sec.gov; ballotpedia.org; daypitney.com",
-      "last_verified": "2026-09-14"
+      "last_verified": "2026-09-14",
+      "strategic_recommendation": "Deprioritize SEC-rule-specific compliance spend; formal rescission is already proposed. Redirect that budget toward California SB253/SB261 and EU reporting obligations, which are moving the opposite direction."
     },
     {
       "regulation_id": "FTC_GreenGuides",
@@ -778,7 +779,8 @@
       "evidence": "The Green Guides revision has been pending since Dec 2022 and remains unrevised as of 2026 \u2014 the change in presidential administration (Biden to Trump) came and went with no update; an FTC spokesperson said in Jan 2025 there was 'nothing new to share.' Consistent with Ferguson's stated 'enforcement over rulemaking' posture. But this does not mean lighter-touch treatment in practice: enforcement under the existing, unrevised guides has tightened through 2024-2025, with carbon-neutral, biodegradable, and unqualified-recyclability claims all triggering real consent decrees. Net effect: the text isn't moving, but enforcement risk under it is not relaxing either \u2014 the same 'stable but with a real countervailing dynamic' pattern as UK_pEPR below",
       "confidence": "real",
       "source": "packagingdive.com; theregreview.org; ftc.gov",
-      "last_verified": "2026-09-14"
+      "last_verified": "2026-09-14",
+      "strategic_recommendation": "Treat the unrevised text as a floor, not a ceiling. Enforcement on carbon-neutral, biodegradable and unqualified-recyclability claims has tightened even without a rule change."
     },
     {
       "regulation_id": "SB253",
@@ -790,7 +792,8 @@
       "evidence": "Wiener publicly responded to the SEC's rollback saying 'California's climate leadership is more critical than ever' \u2014 an explicit statement positioning the state law as a left-state counterweight to federal-right deregulation. Newsom's term-limited exit in Jan 2027 is a real date to re-check this against",
       "confidence": "real",
       "source": "sd11.senate.ca.gov",
-      "last_verified": "2026-09-14"
+      "last_verified": "2026-09-14",
+      "strategic_recommendation": "Scope 1-2 reporting is a real, near-term deadline (10 Nov 2026, after CARB's deferral). Start Scope 3 data collection now, ahead of the 2027 start, rather than waiting for the deadline to force it."
     },
     {
       "regulation_id": "SB261",
@@ -802,7 +805,8 @@
       "evidence": "Passed as part of the same 2023 package with the same Democratic authorship and the same 2026 political defense posture as SB253",
       "confidence": "real",
       "source": "sd11.senate.ca.gov; ga-institute.com",
-      "last_verified": "2026-09-14"
+      "last_verified": "2026-09-14",
+      "strategic_recommendation": "Prepare the underlying climate-risk disclosure regardless of the enforcement injunction; the 9th Circuit blocked enforcement, not the law itself, and the authoring coalition makes reversal unlikely."
     },
     {
       "regulation_id": "EUDR",
@@ -814,7 +818,8 @@
       "evidence": "Parliament voted 402-250 for a second delay and simplification (large operators/traders to 30 Dec 2026, SMEs to 30 Jun 2027); a further Commission simplification review is due by end-April 2026, which could reopen EUDR to still more changes \u2014 a concrete near-term date to watch for a third weakening move",
       "confidence": "real",
       "source": "esgtoday.com; business-humanrights.org; consilium.europa.eu",
-      "last_verified": "2026-09-14"
+      "last_verified": "2026-09-14",
+      "strategic_recommendation": "Treat the Dec 2026 compliance date as provisional, not final: a further Commission simplification review is due by end-April 2026, and a third delay is plausible. Build real traceability now anyway; the obligation itself isn't getting lighter, only its timing."
     },
     {
       "regulation_id": "CSRD",
@@ -826,7 +831,8 @@
       "evidence": "Parliament adopted its Omnibus I negotiating position 382-249-13 (13 Nov 2025); Council gave final approval 24 Feb 2026; entered into force 18 Mar 2026. Confirms the previously-unverified figure in docs/data_sources.md: ESRS mandatory datapoints cut from 1073 to 320 (~70% reduction)",
       "confidence": "real",
       "source": "sphera.com; clifford chance 2026-02; eubelius.com",
-      "last_verified": "2026-09-14"
+      "last_verified": "2026-09-14",
+      "strategic_recommendation": "Rebuild reporting scope around the leaner, Omnibus-cut ESRS (roughly 320 mandatory datapoints, down from 1073), not the pre-Omnibus standard. Plan data collection toward Wave 2/3 filings from 2028."
     },
     {
       "regulation_id": "CSDDD",
@@ -838,7 +844,8 @@
       "evidence": "Same vote/timeline as CSRD \u2014 CSDDD substantive-requirements scope reduced in the same 382-249-13 Parliament vote and Feb 2026 Council approval",
       "confidence": "real",
       "source": "sphera.com; business-humanrights.org",
-      "last_verified": "2026-09-14"
+      "last_verified": "2026-09-14",
+      "strategic_recommendation": "Confirm whether the business still sits inside the narrowed largest-company scope before continuing due-diligence build-out at pre-Omnibus intensity; substantive requirements now apply from 2029."
     },
     {
       "regulation_id": "EU_GreenClaims",
@@ -850,7 +857,8 @@
       "evidence": "The European Commission announced its intent to withdraw the Green Claims Directive proposal on 20 Jun 2025 \u2014 two days after an EPP letter (18 Jun 2025) explicitly called for withdrawal, citing requirements that were 'overly complex, administratively burdensome, and costly.' The same EPP-led simplification pattern that also produced the Omnibus I (CSRD/CSDDD) outcome and the second EUDR delay, now landing on a fourth file. Status remains technically unresolved \u2014 the Commission has not formally terminated the proposal, and Parliament committee chairs have signaled readiness to resume negotiations, so a revival isn't ruled out. The separate, already-adopted EmpCo directive is unaffected and proceeds on its own track (see the EmpCo row below)",
       "confidence": "real",
       "source": "lw.com; gorrissenfederspiel.com; eesc.europa.eu",
-      "last_verified": "2026-09-14"
+      "last_verified": "2026-09-14",
+      "strategic_recommendation": "Don't deprioritize green-claims substantiation work on the strength of this withdrawal announcement; the proposal hasn't been formally terminated, and EmpCo already covers much of the same ground regardless."
     },
     {
       "regulation_id": "EmpCo",
@@ -862,7 +870,8 @@
       "evidence": "EmpCo (Directive (EU) 2024/825) is a separate, already-adopted directive from the withdrawn Green Claims Directive proposal above \u2014 it is not being weakened. Member states had until 27 Mar 2026 to transpose it into national law; on 28 May 2026 the Commission opened infringement procedures (letters of formal notice) against 20 member states for failing to do so. The rules become binding EU-wide from 27 Sep 2026 regardless of transposition status in the laggard states. Germany and Italy, among others, had fully transposed it as of June 2026. This is a member-state administrative-compliance-lag story, not a left/right ideological vote \u2014 marked 'mixed' rather than forced onto a left/right axis",
       "confidence": "real",
       "source": "climatepartner.com; cms.law implementation tracker; xictron.com",
-      "last_verified": "2026-09-14"
+      "last_verified": "2026-09-14",
+      "strategic_recommendation": "Comply to the 27 Sep 2026 EU-wide binding date directly, rather than to any single member state's transposition status; the directive applies even where local transposition is still lagging."
     },
     {
       "regulation_id": "PPWR",
@@ -874,7 +883,8 @@
       "evidence": "PPWR passed with a broad cross-party majority (426-125-74) \u2014 well before the 2025-2026 EPP-led simplification wave that later hit CSRD/CSDDD/EUDR/Green Claims. It entered into force 11 Feb 2025 and applies from 12 Aug 2026 as already scheduled, with recycled-content grading phasing in from 2030. Widely reported as 'the most lobbied political process in the EU's history' during drafting, but the final vote margin shows it wasn't a narrow ideological win the way the later Omnibus-era votes were. Worth re-checking once it's actually in force and post-application lobbying resumes, but no active simplification push was found this pass",
       "confidence": "real",
       "source": "howtheyvote.eu vote 168504; foodpackagingforum.org; europen-packaging.eu",
-      "last_verified": "2026-09-14"
+      "last_verified": "2026-09-14",
+      "strategic_recommendation": "This is the one EU packaging rule the 2025-2026 simplification wave hasn't touched. Treat its 12 Aug 2026 application date and 2030 recycled-content phase-in as fixed, and prioritize packaging investment here over EUDR- or CSRD-adjacent bets."
     },
     {
       "regulation_id": "UK_pEPR",
@@ -886,7 +896,8 @@
       "evidence": "Packaging EPR is proceeding into its planned fee-modulation phase for 2026 as scheduled \u2014 continuity from the framework Labour inherited from the prior Conservative government. But Defra separately postponed mandatory kerbside soft-plastics collection from 2027 to 2030, showing delay pressure exists even under a nominally pro-regulation government, most likely administrative-burden/cost driven rather than a partisan reversal",
       "confidence": "real",
       "source": "erp-recycling.org; grantthornton.co.uk; hansard.parliament.uk 2026-07-01",
-      "last_verified": "2026-09-14"
+      "last_verified": "2026-09-14",
+      "strategic_recommendation": "Budget now for the October 2026 fee eco-modulation change. The separate postponement of mandatory kerbside soft-plastics collection (2027 to 2030) doesn't relax the fee timeline."
     },
     {
       "regulation_id": "UK_PlasticTax",
@@ -898,7 +909,8 @@
       "evidence": "Rate rises automatically each April in line with CPI inflation (now \u00a3228.82/tonne from 1 Apr 2026); no partisan dispute or reversal found",
       "confidence": "real",
       "source": "erp-recycling.org",
-      "last_verified": "2026-09-14"
+      "last_verified": "2026-09-14",
+      "strategic_recommendation": "Model the recycled-content threshold as a recurring, CPI-indexed cost (now \u00a3228.82/tonne from April 2026), not a one-off tax line. No political reversal is in view."
     }
   ],
   "summary": {

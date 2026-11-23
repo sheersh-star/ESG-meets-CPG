@@ -32,7 +32,9 @@ data/raw/                   Source data, one file per dataset
                                  regulatory/ESG legal action, with short/long-term recommendations
   political_landscape.csv       7 real political entities (who controls what, US/UK/EU) and their stance
   legislative_forecast.csv      12 rows, one per regulation — trajectory (strengthening/weakening/
-                                 rollback/stable/gap) joined onto regulatory_calendar.csv by regulation_id
+                                 rollback/stable/gap) joined onto regulatory_calendar.csv by regulation_id,
+                                 plus a strategic_recommendation column surfaced at the top of the
+                                 Compliance Calendar tab
 data/processed/
   esg_console_data.json       Pipeline output — regenerate with `python3 data_pipeline.py`
 docs/
